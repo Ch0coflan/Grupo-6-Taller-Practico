@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class AirplaneController : MonoBehaviour
 {
-    public float speed = 100f;
+    public float speed = 500f;
     public float rotationSpeed = 100f;
 
     private void Update()
     {   
-        // Movimiento lateral y rotación
+        // Movimiento lateral y rotaciï¿½n
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
@@ -16,10 +16,10 @@ public class AirplaneController : MonoBehaviour
         transform.Translate(-Vector3.forward * speed * Time.deltaTime);
 
 
-        // Rotación horizontal (izquierda y derecha)
+        // Rotaciï¿½n horizontal (izquierda y derecha)
         transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
 
-        // Rotación vertical (arriba y abajo)
+        // Rotaciï¿½n vertical (arriba y abajo)
         transform.Rotate(Vector3.right, -verticalInput * rotationSpeed * Time.deltaTime);
 
         // Movimiento con las teclas de flecha
@@ -30,7 +30,7 @@ public class AirplaneController : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.DownArrow))
         {
-            // Disminuir la velocidad hacia adelante (o mover hacia atrás si es necesario)
+            // Disminuir la velocidad hacia adelante (o mover hacia atrï¿½s si es necesario)
             transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.LeftArrow))
