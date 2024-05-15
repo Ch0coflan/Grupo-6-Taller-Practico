@@ -11,12 +11,7 @@ public class AirplaneController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         float verticalInput = Input.GetAxis("Vertical");
 
-
-        // Movimiento hacia adelante constante
-        transform.Translate(-Vector3.forward * speed * Time.deltaTime);
-
-
-        // Rotaci�n horizontal (izquierda y derecha)
+                // Rotaci�n horizontal (izquierda y derecha)
         transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
 
         // Rotaci�n vertical (arriba y abajo)

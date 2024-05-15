@@ -21,6 +21,12 @@ public class PhysicsMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+       // Movement();
+        Rotation();
+    }
+
+    /*void Movement()
+    {
         if (Input.GetAxis("Vertical") > 0)
         {
             // Calcula la dirección del movimiento
@@ -30,14 +36,42 @@ public class PhysicsMovement : MonoBehaviour
             Vector3 movement = movementDirection * speed * Time.fixedDeltaTime;
 
             // Mueve el Rigidbody utilizando MovePosition
-            rb.MovePosition(rb.position + movement);
+            rb.AddForce(rb.position + movement);
         }
         else if (Input.GetAxis("Vertical") < 0)
         {
             Vector3 movementDirection = -Vector3.back;
             Vector3 movement = movementDirection * -speed * Time.fixedDeltaTime;
-            rb.MovePosition(rb.position + movement);
+            rb.AddForce(rb.position + movement);
         }
+
+        float horizontal = Input.GetAxis("Horizontal");
+        if (horizontal > 0)
+        {
+            Debug.Log("giro a la derecha");
+            Vector3 movementDirection = Vector3.right;
+            Vector3 movement = movementDirection * speed * Time.fixedDeltaTime;
+            rb.AddForce(rb.position + movement);
+
+            
+        }
+        else if (horizontal < 0)
+        {
+            Debug.Log("giro a la izquierda");
+            Vector3 movementDirection = -Vector3.left;
+            Vector3 movement = movementDirection * -speed * Time.fixedDeltaTime;
+            rb.AddForce(rb.position + movement);
+        }
+    }*/
+
+    void Rotation()
+    {
+        float inputHorizontal = Input.GetAxis("Horizontal");
+        rb.AddTorque(Vector3.up * inputHorizontal * rotationSpeed);
+
+        // Movimiento hacia adelante
+        float inputVertical = Input.GetAxis("Vertical");
+        rb.AddForce(transform.forward * inputVertical * speed);
     }
 
     
