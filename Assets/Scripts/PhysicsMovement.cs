@@ -4,32 +4,36 @@ using UnityEngine;
 
 public class PhysicsMovement : MonoBehaviour
 {
-    public float speed = 1.0f;  
-    public float rotationSpeed = 1.0f;
+    public float speed = 1f;  
+    public float directionSpeed = 1.0f;
+    public float rotationSpeed = 50f;
     public Rigidbody rb;
     
     void Start()
     {
         rb=GetComponent<Rigidbody>();
+        speed = 1f;
     }
 
     
     void Update()
     {
-       
+       speed = Input.GetKey(KeyCode.Space) ? speed*2 : speed;
     }
 
     private void FixedUpdate()
     {
        // Movement();
+        Direction();
         Rotation();
+        
     }
 
     /*void Movement()
     {
         if (Input.GetAxis("Vertical") > 0)
         {
-            // Calcula la dirección del movimiento
+            // Calcula la direcciÃ³n del movimiento
             Vector3 movementDirection = Vector3.forward;
 
             // Multiplica por la velocidad y el tiempo delta
@@ -64,14 +68,21 @@ public class PhysicsMovement : MonoBehaviour
         }
     }*/
 
-    void Rotation()
+    void Direction()
     {
         float inputHorizontal = Input.GetAxis("Horizontal");
-        rb.AddTorque(Vector3.up * inputHorizontal * rotationSpeed);
+        rb.AddTorque(Vector3.up * inputHorizontal * directionSpeed);
 
         // Movimiento hacia adelante
-        float inputVertical = Input.GetAxis("Vertical");
-        rb.AddForce(transform.forward * inputVertical * speed);
+        
+        
+        //float inputVertical = Input.GetAxis("Vertical");
+        rb.AddForce(transform.forward * speed);
+    }
+    
+    void Rotation()
+    {
+        
     }
 
     
