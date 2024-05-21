@@ -19,7 +19,7 @@ namespace Airplane
         [SerializeField] private float rollSpeed = 200f;
 
         [Header("Rotating speeds multipliers when turbo is used")]
-        [Range(0.1f, 5f)]
+         
         [SerializeField] private float yawTurboMultiplier = 0.3f;
 
         [Range(0.1f, 5f)]
