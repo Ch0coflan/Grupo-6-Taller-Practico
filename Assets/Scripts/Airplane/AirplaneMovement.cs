@@ -29,8 +29,8 @@ namespace Airplane
         [SerializeField] private float rollTurboMultiplier = 1f;
 
         [Header("Moving speed")]
-        [Range(5f, 50f)]
-        [SerializeField] private float defaultSpeed = 10f;
+        [Range(5f, 1000f)]
+        [SerializeField] private float defaultSpeed = 150f;
 
         [Range(10f, 50f)]
         [SerializeField] private float turboSpeed = 20f;
