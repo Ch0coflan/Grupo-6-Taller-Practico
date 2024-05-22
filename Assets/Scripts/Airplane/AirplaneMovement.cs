@@ -115,7 +115,7 @@ namespace Airplane
         {
             Movement();
             SidewaysForceCalculation();
-            DampVelocities();
+            DampRotations();
             
             //Rotate inputs
             _inputH = Input.GetAxis("Horizontal");
@@ -263,10 +263,28 @@ namespace Airplane
             }
         }
         
-        private void DampVelocities()
+        private void DampRotations()
         {
-            _rb.angularVelocity = Vector3.Lerp(_rb.angularVelocity, Vector3.zero, Time.deltaTime * dampingSpeed);
-            _rb.velocity = Vector3.Lerp(_rb.velocity, Vector3.zero, Time.deltaTime * linearDampingSpeed);
+            // Dampen the rotation when no input is given
+            if (_inputH == 0 && _inputV == 0)
+            {
+                // Calculate the amount to dampen by
+                float dampFactor = 1 - (dampingSpeed * Time.deltaTime);
+
+                // Dampen the roll
+                if (Mathf.Abs(transform.localEulerAngles.z) > 0.1f)
+                {
+                    float newZ = transform.localEulerAngles.z * dampFactor;
+                    transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, newZ);
+                }
+
+                // Dampen the pitch
+                if (Mathf.Abs(transform.localEulerAngles.x) > 0.1f)
+                {
+                    float newX = transform.localEulerAngles.x * dampFactor;
+                    transform.localEulerAngles = new Vector3(newX, transform.localEulerAngles.y, transform.localEulerAngles.z);
+                }
+            }
         }
         
         #endregion
