@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Airplane/AirplaneMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Airplane/AirplaneMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,7 +102,7 @@
       <workItem from="1716033376966" duration="15960000" />
       <workItem from="1716217615534" duration="6290000" />
       <workItem from="1716299374855" duration="845000" />
-      <workItem from="1716407257241" duration="1691000" />
+      <workItem from="1716407257241" duration="2371000" />
     </task>
     <servers />
   </component>
