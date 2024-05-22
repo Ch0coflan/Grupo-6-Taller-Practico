@@ -3,64 +3,40 @@ using UnityEngine;
 public class AirplaneController : MonoBehaviour
 {
     public float speed = 500f;
-    public float maxspeed = 500f;
-    public float minspeed = 5f;
-    public float rootspeed1 = 10f;
-    public float rootspeed2 = 20f;
+    public float rotationSpeed = 100f;
 
-    private Rigidbody rb;
+    private void Update()
+    {   
+        // Movimiento lateral y rotaci�n
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
-    void Start()
-    {
-        // Obtener el componente Rigidbody del objeto
-        rb = GetComponent<Rigidbody>();
-    }
+                // Rotaci�n horizontal (izquierda y derecha)
+        transform.Rotate(Vector3.up, horizontalInput * rotationSpeed * Time.deltaTime);
 
-    void Update()
-    {
-        // Manejar el movimiento hacia adelante basado en la velocidad
-        rb.velocity = transform.forward * speed * Time.deltaTime;
+        // Rotaci�n vertical (arriba y abajo)
+        transform.Rotate(Vector3.right, -verticalInput * rotationSpeed * Time.deltaTime);
 
-        // Incrementar velocidad si se presiona la tecla D
-        if (Input.GetKeyDown(KeyCode.D) && speed <= maxspeed)
+        // Movimiento con las teclas de flecha
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            speed += 2;
+            // Aumentar la velocidad hacia adelante
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
-
-        // Decrementar velocidad si se presiona la tecla E
-        if (Input.GetKeyDown(KeyCode.E) && speed >= minspeed)
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            speed -= 2;
+            // Disminuir la velocidad hacia adelante (o mover hacia atr�s si es necesario)
+            transform.Translate(-Vector3.forward * speed * Time.deltaTime);
         }
-
-        // Rotar hacia la izquierda si se presiona la tecla LeftArrow o A
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
-            ApplyTorque(Vector3.down * rootspeed1);
+            // Rotar hacia la izquierda
+            transform.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
         }
-
-        // Rotar hacia la derecha si se presiona la tecla RightArrow o D
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            ApplyTorque(Vector3.up * rootspeed1);
+            // Rotar hacia la derecha
+            transform.Rotate(Vector3.up, rotationSpeed * Time.deltaTime);
         }
-
-        // Rotar hacia abajo si se presiona la tecla DownArrow o S
-        if (Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.S))
-        {
-            ApplyTorque(Vector3.left * rootspeed1);
-        }
-
-        // Rotar hacia arriba si se presiona la tecla UpArrow o W
-        if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))
-        {
-            ApplyTorque(Vector3.right * rootspeed1);
-        }
-    }
-
-    // Método para aplicar fuerzas de torque al Rigidbody
-    void ApplyTorque(Vector3 torque)
-    {
-        rb.AddTorque(torque * Time.deltaTime, ForceMode.VelocityChange);
     }
 }
