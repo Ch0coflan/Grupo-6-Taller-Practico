@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,7 +16,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.huggingface.api@822d2a2626/Editor/HuggingFaceAPIWizard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallPhysics.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -102,7 +100,7 @@
       <workItem from="1716033376966" duration="15960000" />
       <workItem from="1716217615534" duration="6290000" />
       <workItem from="1716299374855" duration="845000" />
-      <workItem from="1716407257241" duration="2371000" />
+      <workItem from="1716407257241" duration="4898000" />
     </task>
     <servers />
   </component>
