@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Airplane
@@ -37,9 +38,6 @@ namespace Airplane
 
         [Range(0.1f, 50f)]
         [SerializeField] private float accelerating = 10f;
-
-        [Range(0.1f, 50f)]
-        [SerializeField] private float deAccelerating = 5f;
 
         [Header("Damping settings")]
         [Range(0f, 5f)]
@@ -84,11 +82,12 @@ namespace Airplane
         #region Private Variables
         
         private float _maxSpeed;
+        private float _minSpeed;
         private float _speedMultiplier;
         private float _currentYawSpeed;
         private float _currentPitchSpeed;
         private float _currentRollSpeed;
-        private float _currentSpeed;
+        [SerializeField]  private float _currentSpeed;
 
         private Rigidbody _rb;
 
@@ -105,8 +104,9 @@ namespace Airplane
         {
             _rb = GetComponent<Rigidbody>();
             _rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
-            
-            _maxSpeed = defaultSpeed;
+
+            _maxSpeed = 140f;
+            _minSpeed = 40f;
             _currentSpeed = defaultSpeed;
             _speedMultiplier = 1;
         }
@@ -114,6 +114,8 @@ namespace Airplane
         private void Update()
         {
             Movement();
+            Acceleration();
+
             SidewaysForceCalculation();
             DampRotations();
             
@@ -130,8 +132,13 @@ namespace Airplane
             
         }
 
+        private void FixedUpdate()
+        {
+           
+        }
+
         #region Fly State
-        
+
         private void SidewaysForceCalculation()
         {
             float multiplierXRot = sidewaysMovement * sidewaysMovementXRot;
@@ -201,16 +208,6 @@ namespace Airplane
                 transform.Rotate(-Vector3.up * (_currentYawSpeed * Time.deltaTime));
             }
 
-            // Acceleration
-            if (_currentSpeed < _maxSpeed)
-            {
-                _currentSpeed += accelerating * Time.deltaTime;
-            }
-            else
-            {
-                _currentSpeed -= deAccelerating * Time.deltaTime;
-            }
-
             // Turbo
             if (_inputTurbo && !turboOverheat)
             {
@@ -262,6 +259,20 @@ namespace Airplane
                 _currentRollSpeed = rollSpeed;
             }
         }
+        public void Acceleration()
+        {
+            if (Input.GetMouseButton(0) && (_currentSpeed < _maxSpeed || _currentSpeed == _minSpeed))
+            {
+                _currentSpeed += accelerating * Time.deltaTime;
+                Debug.Log("Acelerando");
+            }
+
+            if (Input.GetMouseButton(1) && (_currentSpeed == _maxSpeed || _currentSpeed > _minSpeed))
+            {
+                _currentSpeed -= accelerating * Time.deltaTime;
+                Debug.Log("Frenando");
+            }
+        }
         
         private void DampRotations()
         {
@@ -286,8 +297,9 @@ namespace Airplane
                 }
             }
         }
-        
+
         #endregion
-        
+
+
     }
 }

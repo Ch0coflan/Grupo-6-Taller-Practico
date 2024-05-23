@@ -230,7 +230,7 @@ GameObject:
   - component: {fileID: 829311421}
   - component: {fileID: 829311420}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: f
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829311419}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4eadf963020b7024a97f9904a8b8557e, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -335,8 +335,8 @@ GameObject:
   - component: {fileID: 1160713513}
   - component: {fileID: 1160713512}
   - component: {fileID: 1160713511}
-  - component: {fileID: 1160713510}
   - component: {fileID: 1160713515}
+  - component: {fileID: 1160713516}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -344,21 +344,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1160713510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1160713509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b4e39ab043fe5841b7febeca35390e5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fuerzaAscendente: 9.8
-  drag: 1
-  fuerzaImpulso: 10
 --- !u!135 &1160713511
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -472,6 +457,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1160713516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1160713509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adff616293885f64e98bb398e1427a76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialUpwardForce: 20
+  transitionTime: 2
+  customGravity: -9.8
+  airResistance: 2
 --- !u!1 &1530156384
 GameObject:
   m_ObjectHideFlags: 0
