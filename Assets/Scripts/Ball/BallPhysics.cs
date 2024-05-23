@@ -4,49 +4,36 @@ using UnityEngine;
 
 public class BallPhysics : MonoBehaviour
 {
-   public float initialUpwardForce = 20.0f; // Fuerza inicial hacia arriba
-   public float transitionTime = 2.0f; // Tiempo para cambiar al comportamiento del globo
-   public float customGravity = -9.8f; // Gravedad personalizada más débil
-   public float airResistance = 2.0f; // Resistencia del aire alta
+ 
+   public float constanteElastica = 100f;
+   public float longitudNatural = 0.5f;
+   
 
-   private Rigidbody rb;
-   private bool initialForceApplied = false;
-
-   void Start()
+   
+   private void OnCollisionEnter(Collision collision)
    {
-      rb = GetComponent<Rigidbody>();
-      rb.useGravity = false;
-      rb.drag = airResistance;
-   }
-
-   void FixedUpdate()
-   {
-      if (!initialForceApplied)
+      if (collision.gameObject.CompareTag("ObjetoCae"))
       {
-         // Aplicar la gravedad personalizada
-         rb.AddForce(new Vector3(0, customGravity, 0), ForceMode.Acceleration);
+         AplicarFuerzaRestauradora(collision.gameObject);
       }
    }
-
-   // Llamar a este método cuando el avión golpee la pelota
-   public void ApplyImpactForce(Vector3 direction, float force)
+   private void AplicarFuerzaRestauradora(GameObject ObjetoCae)
    {
-      // Aplica una fuerza inicial hacia arriba más fuerte
-      rb.AddForce(Vector3.up * initialUpwardForce, ForceMode.Impulse);
-      // Aplica la fuerza de impacto en la dirección especificada
-      rb.AddForce(direction * force, ForceMode.Impulse);
-      // Comienza la corutina para cambiar al comportamiento del globo
-      StartCoroutine(TransitionToBalloonBehavior());
-   }
+      Rigidbody rbObjetoCae = ObjetoCae.GetComponent<Rigidbody>();
 
-   private IEnumerator TransitionToBalloonBehavior()
-   {
-      // Marcar que la fuerza inicial ha sido aplicada
-      initialForceApplied = true;
-      // Esperar el tiempo de transición
-      yield return new WaitForSeconds(transitionTime);
-      // Cambiar al comportamiento del globo
-      initialForceApplied = false;
+      if (rbObjetoCae != null)
+      {
+         // es la distancia que hay entre el objeto y la superficie (distancia relativa)
+         float posicionRelativa = ObjetoCae.transform.position.y - transform.position.y;
+
+         //calcular la fuerza elastica segun la ley de hooke
+
+         float fuerzaElastica = constanteElastica * (posicionRelativa - longitudNatural);
+
+         //APLICAR FUERZA
+
+         rbObjetoCae.AddForce(Vector3.up * fuerzaElastica, ForceMode.Impulse);
+      }
    }
    
 }
