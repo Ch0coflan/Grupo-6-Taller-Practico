@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Prefabs/Contollers/Jet controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Prefabs/Contollers/Jet controller.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Prefabs/Contollers/Propelled controller.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Prefabs/Contollers/Propelled controller.prefab" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +33,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "Features-Santiago",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -107,7 +104,7 @@
       <workItem from="1716407257241" duration="5505000" />
       <workItem from="1716472424912" duration="5938000" />
       <workItem from="1716560567552" duration="737000" />
-      <workItem from="1716583751963" duration="1653000" />
+      <workItem from="1716583751963" duration="2249000" />
     </task>
     <servers />
   </component>
