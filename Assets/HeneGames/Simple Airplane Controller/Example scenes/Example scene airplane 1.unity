@@ -425,7 +425,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8442488485881399089, guid: bebe5fae0b9f0e94a8a2af3207b79b61, type: 3}
       propertyPath: alignmentSpeed
-      value: 2.16
+      value: 2.05
       objectReference: {fileID: 0}
     - target: {fileID: 8442488485881399089, guid: bebe5fae0b9f0e94a8a2af3207b79b61, type: 3}
       propertyPath: groundMask.m_Bits
@@ -598,8 +598,8 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.79
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1.23
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -638,7 +638,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
