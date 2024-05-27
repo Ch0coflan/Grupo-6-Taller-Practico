@@ -78,7 +78,21 @@ namespace Airplane
 
         [Range(-1, 1f)]
         [SerializeField] private float sidewaysMovementYPosition = 0.1f;
-
+        
+        [Header("Ground Detection")]
+        [SerializeField] private LayerMask groundMask;
+        [SerializeField] private float groundCheckDistance = 10f;
+        
+        [SerializeField] private float sideRayOffset = 5f;
+        
+        [SerializeField] private float groundCheckDistanceSide = 8f;
+        
+        [Range(0f, 180f)]
+        [SerializeField] private float maxAngleSide = 10f;
+        
+        [Range(0f, 5f)]
+        [SerializeField] private float alignmentSpeed = 2f;
+        
         #endregion
 
         #region Private Variables
@@ -89,6 +103,9 @@ namespace Airplane
         private float _currentPitchSpeed;
         private float _currentRollSpeed;
         private float _currentSpeed;
+        private bool _isNearGround;
+        private bool _isNearGroundLeft;
+        private bool _isNearGroundRight;
 
         private Rigidbody _rb;
 
@@ -113,11 +130,19 @@ namespace Airplane
 
         private void Update()
         {
+            Controls();
             Movement();
             SidewaysForceCalculation();
-            DampRotations();
-            
-            //Rotate inputs
+            DampVelocities();
+            AlignWithGround();
+
+        }
+
+        //Rotate inputs
+        
+        private void Controls()
+        {
+        
             _inputH = Input.GetAxis("Horizontal");
             _inputV = Input.GetAxis("Vertical");
 
@@ -136,7 +161,6 @@ namespace Airplane
         {
             float multiplierXRot = sidewaysMovement * sidewaysMovementXRot;
             float multiplierYRot = sidewaysMovement * sidewaysMovementYRot;
-
             float multiplierYPosition = sidewaysMovement * sidewaysMovementYPosition;
 
             // Right side 
@@ -190,6 +214,17 @@ namespace Airplane
             // Rotate airplane by inputs
             transform.Rotate(Vector3.forward * (-_inputH * _currentRollSpeed * Time.deltaTime));
             transform.Rotate(Vector3.right * (_inputV * _currentPitchSpeed * Time.deltaTime));
+            
+            // Rotate airplane by inputs
+            if ((_inputH > 0 && !_isNearGroundLeft) || (_inputH < 0 && !_isNearGroundRight))
+            {
+                transform.Rotate(Vector3.forward * (-_inputH * _currentRollSpeed * Time.deltaTime));
+            }
+
+            if (!_isNearGround || _inputV < 0)
+            {
+                transform.Rotate(Vector3.right * (_inputV * _currentPitchSpeed * Time.deltaTime));
+            }
 
             // Rotate yaw
             if (_inputYawRight)
@@ -262,32 +297,82 @@ namespace Airplane
                 _currentRollSpeed = rollSpeed;
             }
         }
-        
-        private void DampRotations()
+
+        private void DampVelocities()
         {
-            // Dampen the rotation when no input is given
-            if (_inputH == 0 && _inputV == 0)
+            _rb.angularVelocity = Vector3.Lerp(_rb.angularVelocity, Vector3.zero, Time.deltaTime * dampingSpeed);
+            _rb.velocity = Vector3.Lerp(_rb.velocity, Vector3.zero, Time.deltaTime * linearDampingSpeed);
+        }
+
+        private void AlignWithGround()
+        {
+            //Ray-Cast Ground
+            _isNearGround = Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit,
+                groundCheckDistance, groundMask);
+
+            if (_isNearGround)
             {
-                // Calculate the amount to dampen by
-                float dampFactor = 1 - (dampingSpeed * Time.deltaTime);
+                Vector3 desiredUp = hit.normal;
+                Quaternion targetRotaton = Quaternion.FromToRotation(transform.up, desiredUp) * transform.rotation;
+                transform.rotation =
+                    Quaternion.Slerp(transform.rotation, targetRotaton, Time.deltaTime * alignmentSpeed);
+            }
+            
+            // Ray-cast Side Way
+            Vector3 leftRayDirection = Quaternion.Euler(0, transform.eulerAngles.y, maxAngleSide) * Vector3.down;
+            Vector3 rightRayDirection = Quaternion.Euler(0, transform.eulerAngles.y, -maxAngleSide) * Vector3.down;
 
-                // Dampen the roll
-                if (Mathf.Abs(transform.localEulerAngles.z) > 0.1f)
-                {
-                    float newZ = transform.localEulerAngles.z * dampFactor;
-                    transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, newZ);
-                }
+            Vector3 leftRayOrigin = transform.position + transform.right * sideRayOffset;
+            Vector3 rightRayOrigin = transform.position - transform.right * sideRayOffset;
 
-                // Dampen the pitch
-                if (Mathf.Abs(transform.localEulerAngles.x) > 0.1f)
-                {
-                    float newX = transform.localEulerAngles.x * dampFactor;
-                    transform.localEulerAngles = new Vector3(newX, transform.localEulerAngles.y, transform.localEulerAngles.z);
-                }
+            _isNearGroundLeft = Physics.Raycast(leftRayOrigin, leftRayDirection, out hit, groundCheckDistanceSide, groundMask);
+            _isNearGroundRight = Physics.Raycast(rightRayOrigin, rightRayDirection, out hit, groundCheckDistanceSide, groundMask);
+        }
+
+        #endregion
+        
+#if UNITY_EDITOR
+        
+        private void OnDrawGizmos()
+        {
+            // Draw ground Gizmo
+            Gizmos.color = Color.red;
+            Gizmos.DrawLine(transform.position, transform.position + Vector3.down * groundCheckDistance);
+
+            // Draw Sphere if check collision.
+            if (Physics.Raycast(transform.position, Vector3.down, out RaycastHit hit, groundCheckDistance, groundMask))
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawSphere(hit.point, 0.5f);
+            }
+            
+            // Draw Side-way Gizmo
+            Gizmos.color = Color.blue;
+
+            Vector3 leftRayDirection = Quaternion.Euler(0, transform.eulerAngles.y, maxAngleSide) * Vector3.down;
+            Vector3 rightRayDirection = Quaternion.Euler(0, transform.eulerAngles.y, -maxAngleSide) * Vector3.down;
+
+            Vector3 leftRayOrigin = transform.position + transform.right * sideRayOffset;
+            Vector3 rightRayOrigin = transform.position - transform.right * sideRayOffset;
+
+            Gizmos.DrawLine(leftRayOrigin, leftRayOrigin + leftRayDirection * groundCheckDistanceSide);
+            Gizmos.DrawLine(rightRayOrigin, rightRayOrigin + rightRayDirection * groundCheckDistanceSide);
+
+            // Draw Sphere if check collision.
+            if (Physics.Raycast(leftRayOrigin, leftRayDirection, out hit, groundCheckDistanceSide, groundMask))
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawSphere(hit.point, 0.5f);
+            }
+    
+            if (Physics.Raycast(rightRayOrigin, rightRayDirection, out hit, groundCheckDistanceSide, groundMask))
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawSphere(hit.point, 0.5f);
             }
         }
         
-        #endregion
+#endif
         
     }
 }
