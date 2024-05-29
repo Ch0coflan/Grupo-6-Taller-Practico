@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Airplane/AirplaneMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Airplane/AirplaneMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +107,8 @@
       <workItem from="1716560567552" duration="737000" />
       <workItem from="1716583751963" duration="2249000" />
       <workItem from="1716818809006" duration="3580000" />
+      <workItem from="1716922332698" duration="557000" />
+      <workItem from="1716924380669" duration="3147000" />
     </task>
     <servers />
   </component>
