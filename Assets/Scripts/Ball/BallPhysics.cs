@@ -35,7 +35,7 @@ namespace Airplane
 
             rb.AddForce( airCurrent );
             Vector3 drag = -rb.velocity * dragCoefficient;
-            rb.velocity = drag;
+            rb.AddForce(drag);
         }
 
     
