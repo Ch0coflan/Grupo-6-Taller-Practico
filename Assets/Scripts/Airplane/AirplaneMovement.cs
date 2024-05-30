@@ -9,13 +9,13 @@ namespace Airplane
         #region Serialized Variables
 
         [Header("Rotating speeds")]
-        [Range(5f, 500f)]
+        [Range(5f, 150f)]
         [SerializeField] private float yawSpeed = 50f;
 
-        [Range(5f, 500f)]
+        [Range(5f, 150f)]
         [SerializeField] private float pitchSpeed = 100f;
 
-        [Range(5f, 500f)]
+        [Range(5f, 150f)]
         [SerializeField] private float rollSpeed = 200f;
 
         [Header("Rotating speeds multipliers when turbo is used")]
@@ -29,8 +29,8 @@ namespace Airplane
         [SerializeField] private float rollTurboMultiplier = 1f;
 
         [Header("Moving speed")]
-        [Range(5f, 1000f)]
-        [SerializeField] private float defaultSpeed = 150f;
+        [Range(5f, 30f)]
+        [SerializeField] private float defaultSpeed;
 
         [Range(10f, 50f)]
         [SerializeField] private float turboSpeed = 20f;
@@ -121,8 +121,8 @@ namespace Airplane
             _rb = GetComponent<Rigidbody>();
             _rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-            _minSpeed = 50f;
-            _maxSpeed = 100f;
+            _minSpeed = 10f;
+            _maxSpeed = 30f;
             _currentSpeed = defaultSpeed;
             _speedMultiplier = 1;
         }
