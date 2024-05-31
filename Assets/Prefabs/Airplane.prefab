@@ -95,11 +95,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6147167716155834149}
   - component: {fileID: 6732108808535490875}
-  - component: {fileID: 2804032698884727181}
-  - component: {fileID: 3191605921198002311}
+  - component: {fileID: 5556894231426849281}
+  - component: {fileID: 3685133377348593697}
   m_Layer: 0
   m_Name: Airplane
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,40 +147,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2804032698884727181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2454445378728099957}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92b7d4266d7c287448b7e61af70a4424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  yawSpeed: 50
-  pitchSpeed: 100
-  rollSpeed: 80
-  yawTurboMultiplier: 0.3
-  pitchTurboMultiplier: 0.5
-  rollTurboMultiplier: 1
-  defaultSpeed: 50
-  turboSpeed: 20
-  accelerating: 10
-  deAccelerating: 5
-  dampingSpeed: 2
-  linearDampingSpeed: 2
-  turboHeatingSpeed: 0
-  turboCooldownSpeed: 0
-  turboHeat: 0
-  turboOverheatOver: 0
-  turboOverheat: 0
-  sidewaysMovement: 15
-  sidewaysMovementXRot: 0.012
-  sidewaysMovementYRot: 1.5
-  sidewaysMovementYPosition: 0.1
---- !u!65 &3191605921198002311
+--- !u!65 &5556894231426849281
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,5 +166,46 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.2068787, y: 1.1996536, z: 0.551178}
-  m_Center: {x: -0.019302368, y: 0.06552887, z: 0.77137756}
+  m_Size: {x: 6.577423, y: 1.7646065, z: 0.45651245}
+  m_Center: {x: -0.00944519, y: 0.14542198, z: 0.8860016}
+--- !u!114 &3685133377348593697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2454445378728099957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae065912c3087bf4f8e0097cd608ee04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yawSpeed: 50
+  pitchSpeed: 100
+  rollSpeed: 200
+  yawTurboMultiplier: 0.3
+  pitchTurboMultiplier: 0.5
+  rollTurboMultiplier: 1
+  defaultSpeed: 150
+  turboSpeed: 20
+  accelerating: 10
+  dampingSpeed: 2
+  linearDampingSpeed: 2
+  turboHeatingSpeed: 0
+  turboCooldownSpeed: 0
+  turboHeat: 0
+  turboOverheatOver: 0
+  turboOverheat: 0
+  sidewaysMovement: 15
+  sidewaysMovementXRot: 0.012
+  sidewaysMovementYRot: 1.5
+  sidewaysMovementYPosition: 0.1
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  groundCheckDistance: 10
+  sideRayOffset: 5
+  groundCheckDistanceSide: 8
+  maxAngleSide: 10
+  alignmentSpeed: 2
+  _currentSpeed: 0
