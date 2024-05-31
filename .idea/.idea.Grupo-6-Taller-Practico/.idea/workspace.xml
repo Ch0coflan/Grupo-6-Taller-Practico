@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/HeneGames/Simple Airplane Controller/Example scenes/Example scene airplane 1.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +20,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
+    <option name="selectedTabId" value="SWEA" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -109,6 +108,7 @@
       <workItem from="1716818809006" duration="3580000" />
       <workItem from="1716922332698" duration="557000" />
       <workItem from="1716924380669" duration="3147000" />
+      <workItem from="1717096179394" duration="600000" />
     </task>
     <servers />
   </component>
