@@ -1133,7 +1133,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 255395288}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603093803}
+        m_TargetAssemblyTypeName: MenuView, Assembly-CSharp
+        m_MethodName: OnClick_buttons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &255395288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1436,6 +1448,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 603093801}
   - {fileID: 1986824256}
   - {fileID: 815036431}
   - {fileID: 1142343504}
@@ -2663,8 +2676,8 @@ GameObject:
   - component: {fileID: 586287040}
   - component: {fileID: 586287039}
   m_Layer: 5
-  m_Name: Options
-  m_TagString: Untagged
+  m_Name: View6 Options
+  m_TagString: Window6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2729,6 +2742,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 586287037}
   m_CullTransparentMesh: 1
+--- !u!1 &603093799
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 603093801}
+  - component: {fileID: 603093803}
+  - component: {fileID: 603093802}
+  - component: {fileID: 603093804}
+  m_Layer: 0
+  m_Name: GameManagerMenu
+  m_TagString: menu manager
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &603093801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603093799}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2103.1643, y: -765.5299, z: 726.08966}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 291362469}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603093802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603093799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e75fd821e5874b4b94178cab583c47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &603093803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603093799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9183b607bdeb84aae94273ec47801a63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &603093804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603093799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6e1982dc01334066b688f4940965474, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &610931524
 GameObject:
   m_ObjectHideFlags: 0
@@ -3699,9 +3782,10 @@ GameObject:
   - component: {fileID: 815036431}
   - component: {fileID: 815036433}
   - component: {fileID: 815036432}
+  - component: {fileID: 815036434}
   m_Layer: 5
-  m_Name: PreLobby
-  m_TagString: Untagged
+  m_Name: View2 PreLobby
+  m_TagString: Window2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3766,6 +3850,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815036430}
   m_CullTransparentMesh: 1
+--- !u!114 &815036434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 815036430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e75fd821e5874b4b94178cab583c47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &815431692
 GameObject:
   m_ObjectHideFlags: 0
@@ -4988,7 +5084,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1021336109}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603093803}
+        m_TargetAssemblyTypeName: MenuView, Assembly-CSharp
+        m_MethodName: OnClick_buttons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1021336109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5580,8 +5688,8 @@ GameObject:
   - component: {fileID: 1142343506}
   - component: {fileID: 1142343505}
   m_Layer: 5
-  m_Name: LobbyHost
-  m_TagString: Untagged
+  m_Name: View3 LobbyHost
+  m_TagString: Window3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6785,8 +6893,8 @@ GameObject:
   - component: {fileID: 1284110045}
   - component: {fileID: 1284110044}
   m_Layer: 5
-  m_Name: Lenguae
-  m_TagString: Untagged
+  m_Name: View7 Lenguae
+  m_TagString: Window7
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8357,7 +8465,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1573880015}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 603093803}
+        m_TargetAssemblyTypeName: MenuView, Assembly-CSharp
+        m_MethodName: OnClick_buttons
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1573880015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8617,8 +8737,8 @@ GameObject:
   - component: {fileID: 1630315771}
   - component: {fileID: 1630315770}
   m_Layer: 5
-  m_Name: LobbyWest
-  m_TagString: Untagged
+  m_Name: View4 LobbyWest
+  m_TagString: Window4
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9194,8 +9314,8 @@ GameObject:
   - component: {fileID: 1762839164}
   - component: {fileID: 1762839163}
   m_Layer: 5
-  m_Name: Credits
-  m_TagString: Untagged
+  m_Name: View5 Credits
+  m_TagString: Window5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10158,8 +10278,8 @@ GameObject:
   - component: {fileID: 1910182618}
   - component: {fileID: 1910182617}
   m_Layer: 5
-  m_Name: Sound
-  m_TagString: Untagged
+  m_Name: View8 Sound
+  m_TagString: Window8
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10527,13 +10647,14 @@ GameObject:
   - component: {fileID: 1986824256}
   - component: {fileID: 1986824258}
   - component: {fileID: 1986824257}
+  - component: {fileID: 1986824259}
   m_Layer: 5
-  m_Name: Ppal
-  m_TagString: Untagged
+  m_Name: View1 Ppal
+  m_TagString: Window1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1986824256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10597,6 +10718,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986824255}
   m_CullTransparentMesh: 1
+--- !u!114 &1986824259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1986824255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e75fd821e5874b4b94178cab583c47e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1988750905
 GameObject:
   m_ObjectHideFlags: 0
