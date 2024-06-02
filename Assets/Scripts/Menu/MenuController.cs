@@ -4,16 +4,14 @@ using UnityEngine;
 public class MenuController : MonoBehaviour
 {
     private navegationManager _classNavegationManager;
-
-    void Start()
+    private Menu _classMenu;
+    
+    public void ModuleInitialitation()
     {
         _classNavegationManager = FindObjectOfType<navegationManager>();
-        if (_classNavegationManager == null)
-        {
-            Debug.LogError("No se encontró el componente navegationManager.");
-        }
+        _classMenu = FindObjectOfType<Menu>();
+        _classMenu.ViewInitialitation();
     }
-
     public void Evento(ref int controllerParameter)
     {
         Debug.Log("Controller1: la vista me envía este número de ventana " + controllerParameter);
