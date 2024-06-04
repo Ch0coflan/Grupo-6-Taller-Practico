@@ -6,7 +6,7 @@ public class MenuController : MonoBehaviour
     private navegationManager _classNavegationManager;
     private Menu _classMenu;
 
-    public void ModuleInitialization()
+    public void Start()
     {
         _classNavegationManager = FindObjectOfType<navegationManager>();
         _classMenu = FindObjectOfType<Menu>();

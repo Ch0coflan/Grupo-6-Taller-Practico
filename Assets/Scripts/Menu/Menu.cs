@@ -1,12 +1,24 @@
 
+using System;
 using UnityEngine;
 
 public class Menu : MonoBehaviour
 {
     private MenuController _classMenuController;
-    private GameObject _prelobbyPanel;
-    private GameObject _creditsPanel;
-    private GameObject _optionsPanel;
+    public GameObject _prelobbyPanel;
+    public GameObject _creditsPanel;
+    public GameObject _optionsPanel;
+    public GameObject lobbyPanel;
+
+    public void Start()
+    {
+        _prelobbyPanel.SetActive(false);
+        _creditsPanel.SetActive(false);
+        _optionsPanel.SetActive(false);
+        lobbyPanel.SetActive(true);
+    }
+    
+    
 
     public void ViewInitialization()
     {
@@ -16,7 +28,7 @@ public class Menu : MonoBehaviour
     public void OnClickPlayButton()
     {
         // Desactiva el panel actual
-        gameObject.SetActive(false);
+        lobbyPanel.SetActive(false);
 
         // Activa el panel de Prelobby (con la etiqueta "Window2")
         _prelobbyPanel.SetActive(true);
@@ -26,7 +38,7 @@ public class Menu : MonoBehaviour
     public void OnClickCreditsButton()
     {
         // Desactiva el panel actual
-        gameObject.SetActive(false);
+        lobbyPanel.SetActive(false);
 
         // Activa el panel de Créditos (con la etiqueta "Window5")
         _creditsPanel.SetActive(true);
@@ -36,10 +48,32 @@ public class Menu : MonoBehaviour
     public void OnClickOptionsButton()
     {
         // Desactiva el panel actual
-        gameObject.SetActive(false);
+        lobbyPanel.SetActive(false);
 
         // Activa el panel de Opciones (con la etiqueta "Window6")
         _optionsPanel.SetActive(true);
         Debug.Log("Options button clicked");
+    }
+
+    public void GoBackOptionsButton()
+    {
+        // Activa el panel actual
+        _optionsPanel.SetActive(false);
+        
+        // Desactiva el panel de Opciones (con la etiqueta "Window6")
+        lobbyPanel.SetActive(true);
+        
+        Debug.Log("Go Back Options button clicked");
+    }
+    
+    public void GoBackCreditsButton()
+    {
+        // Activa el panel actual
+        _creditsPanel.SetActive(false);
+        
+        // Desactiva el panel de Opciones (con la etiqueta "Window6")
+        lobbyPanel.SetActive(true);
+        
+        Debug.Log("Go Back Credits button clicked");
     }
 }
