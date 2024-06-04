@@ -5,13 +5,14 @@ public class MenuController : MonoBehaviour
 {
     private navegationManager _classNavegationManager;
     private Menu _classMenu;
-    
-    public void ModuleInitialitation()
+
+    public void ModuleInitialization()
     {
         _classNavegationManager = FindObjectOfType<navegationManager>();
         _classMenu = FindObjectOfType<Menu>();
-        _classMenu.ViewInitialitation();
+        _classMenu.ViewInitialization();
     }
+
     public void Evento(ref int controllerParameter)
     {
         Debug.Log("Controller1: la vista me envía este número de ventana " + controllerParameter);

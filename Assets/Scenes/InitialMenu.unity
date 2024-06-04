@@ -4214,7 +4214,7 @@ GameObject:
   - component: {fileID: 284594147600612133}
   - component: {fileID: 6145531103507565511}
   m_Layer: 5
-  m_Name: creditsPanel
+  m_Name: _creditsPanel
   m_TagString: Window5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5210,7 +5210,7 @@ GameObject:
   - component: {fileID: 6913647103877597877}
   - component: {fileID: 3599223663511771927}
   m_Layer: 5
-  m_Name: prelobbyPanel
+  m_Name: _prelobbyPanel
   m_TagString: Window2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5576,7 +5576,7 @@ GameObject:
   - component: {fileID: 2628337166797723486}
   - component: {fileID: 5602698169479555378}
   m_Layer: 5
-  m_Name: optionsPanel
+  m_Name: _creditsPanel
   m_TagString: Window6
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
