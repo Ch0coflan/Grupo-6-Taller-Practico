@@ -63,6 +63,46 @@ public class Menu : MonoBehaviour
         Debug.Log("Options button clicked");
     }
 
+    public void OnClickCreateCodeButton()
+    {
+        // Desactiva el panel actual
+        prelobbyPanel.SetActive(false);
+
+        // Activa el panel de Opciones (con la etiqueta "Window6")
+        lobbyHostPanel.SetActive(true);
+        Debug.Log("Create Code button clicked");
+    }
+
+    public void OnClickEnterCodeButton()
+    {
+        // Desactiva el panel actual
+        prelobbyPanel.SetActive(false);
+
+        // Activa el panel de Opciones (con la etiqueta "Window6")
+        lobbyWestPanel.SetActive(true);
+        Debug.Log("Enter Code button clicked");
+    }
+
+    public void OnClickLenguageButton()
+    {
+        // Desactiva el panel actual
+        optionsPanel.SetActive(false);
+
+        // Activa el panel de Opciones (con la etiqueta "Window6")
+        lenguagePanel.SetActive(true);
+        Debug.Log("Lenguage button clicked");
+    }
+
+    public void OnClickSoundButton()
+    {
+        // Desactiva el panel actual
+        optionsPanel.SetActive(false);
+
+        // Activa el panel de Opciones (con la etiqueta "Window6")
+        soundPanel.SetActive(true);
+        Debug.Log("Sound button clicked");
+    }
+
     public void GoBackPreLobbyButton()
     {
         // Activa el panel actual
