@@ -3,7 +3,12 @@ guid: 47203a22bffce9e4d88932db119d4934
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: telaBalon
+    second: {fileID: 2100000, guid: 8aadeaec294211f4ea00a2b35c26cbce, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
