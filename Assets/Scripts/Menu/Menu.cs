@@ -135,6 +135,52 @@ public class Menu : MonoBehaviour
         Debug.Log("Go Back Credits button clicked");
     }
 
+    public void GoBackLenguageButton()
+    {
+        // Activa el panel actual
+        lenguagePanel.SetActive(false);
+        
+        // Desactiva el panel de Opciones (con la etiqueta "Window6")
+        optionsPanel.SetActive(true);
+        
+        Debug.Log("Go Back Lenguage button clicked");
+    }
+
+    public void GoBackSoundButton()
+    {
+        // Activa el panel actual
+        soundPanel.SetActive(false);
+        
+        // Desactiva el panel de Opciones (con la etiqueta "Window6")
+        optionsPanel.SetActive(true);
+        
+        Debug.Log("Go Back Sound button clicked");
+    }
+
+    public void GoBackLobbyHostButton()
+    {
+        // Activa el panel actual
+        lobbyHostPanel.SetActive(false);
+        
+        // Desactiva el panel de Opciones (con la etiqueta "Window6")
+        prelobbyPanel.SetActive(true);
+        
+        Debug.Log("Go Back Lobby Host button clicked");
+    }
+
+    public void GoBackLobbyWestButton()
+    {
+        // Activa el panel actual
+        lobbyWestPanel.SetActive(false);
+        
+        // Desactiva el panel de Opciones (con la etiqueta "Window6")
+        prelobbyPanel.SetActive(true);
+        
+        Debug.Log("Go Back Lobby West button clicked");
+    }
+
+    
+
     public void QuitButton()
     {
         Application.Quit();
