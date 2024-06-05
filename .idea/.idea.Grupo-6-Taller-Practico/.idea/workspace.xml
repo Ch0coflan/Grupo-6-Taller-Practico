@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InitialMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InitialMenu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Santi.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Santi.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,10 +20,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallPhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Menu/MenuView.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="SWEA" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -109,6 +113,16 @@
       <workItem from="1716922332698" duration="557000" />
       <workItem from="1716924380669" duration="3147000" />
       <workItem from="1717096179394" duration="600000" />
+      <workItem from="1717246532057" duration="2779000" />
+      <workItem from="1717276740425" duration="4836000" />
+      <workItem from="1717306419479" duration="83000" />
+      <workItem from="1717306572092" duration="6312000" />
+      <workItem from="1717346738609" duration="322000" />
+      <workItem from="1717388170201" duration="609000" />
+      <workItem from="1717391332673" duration="6000" />
+      <workItem from="1717391347467" duration="3887000" />
+      <workItem from="1717511334255" duration="4828000" />
+      <workItem from="1717527845997" duration="5811000" />
     </task>
     <servers />
   </component>

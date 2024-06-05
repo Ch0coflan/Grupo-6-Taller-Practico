@@ -5,7 +5,15 @@ TagManager:
   serializedVersion: 2
   tags:
   - ObjetoCae
-  - Pared
+  - Window1
+  - Window2
+  - Window3
+  - Window4
+  - Window5
+  - Window6
+  - Window7
+  - Window8
+  - menu manager
   layers:
   - Default
   - TransparentFX
