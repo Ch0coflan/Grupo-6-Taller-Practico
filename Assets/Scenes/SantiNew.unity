@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.02369936, g: 0.059103012, b: 0.038971495, a: 1}
+  m_IndirectSpecularColor: {r: 0.023691945, g: 0.059092544, b: 0.038975097, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -413,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 116215606}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.032217458, y: -0.00000001744898, z: 0.0000000031716676, w: 0.9994809}
+  m_LocalRotation: {x: -0.03221746, y: 0.00000004221356, z: 0.0000000058121623, w: 0.9994809}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1509,6 +1509,7 @@ GameObject:
   - component: {fileID: 629736366}
   - component: {fileID: 629736365}
   - component: {fileID: 629736364}
+  - component: {fileID: 629736368}
   m_Layer: 3
   m_Name: Camera system
   m_TagString: MainCamera
@@ -1617,14 +1618,58 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 629736363}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.026051952, y: -0.7751403, z: -0.032031536, w: 0.63043857}
-  m_LocalPosition: {x: -37.946465, y: -6.9000006, z: -12.5689535}
+  m_LocalRotation: {x: -0.026051948, y: -0.7751404, z: -0.03203154, w: 0.6304385}
+  m_LocalPosition: {x: -37.946465, y: -6.9000006, z: -12.56895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 763582970}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629736368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629736363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &656294818
 GameObject:
   m_ObjectHideFlags: 0
@@ -2401,7 +2446,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1211648633}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.013223644, y: 0.000000012273617, z: -2.987144e-10, w: 0.99991256}
+  m_LocalRotation: {x: 0.013223644, y: 0.00000007190228, z: 4.794444e-10, w: 0.9999126}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3431,7 +3476,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791333204}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018189497, y: -0.000000017556655, z: -0.000000002169493, w: 0.9998346}
+  m_LocalRotation: {x: -0.018189494, y: 0.000000012274619, z: -8.4924506e-10, w: 0.9998346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
