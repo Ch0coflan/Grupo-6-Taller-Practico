@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Airplane
@@ -113,7 +114,8 @@ namespace Airplane
         private bool _inputTurbo;
         private bool _inputYawLeft;
         private bool _inputYawRight;
-        
+        private bool _isBackward;
+
         #endregion
 
         private void Start()
@@ -121,8 +123,8 @@ namespace Airplane
             _rb = GetComponent<Rigidbody>();
             _rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-            _minSpeed = 10f;
-            _maxSpeed = 30f;
+            _minSpeed = 15f;
+            _maxSpeed = 25f;
             _currentSpeed = defaultSpeed;
             _speedMultiplier = 1;
         }
@@ -228,10 +230,17 @@ namespace Airplane
             }
         }
 
-private void Movement()
-        {
+        private void Movement()
+        { 
             // Move forward
-            _rb.velocity = transform.forward * _currentSpeed;
+            if (_isBackward)
+            {
+                _rb.velocity = transform.forward * -_currentSpeed;
+            }
+            else
+            {
+                _rb.velocity = transform.forward * _currentSpeed;
+            }
 
             // Rotate airplane by inputs
             transform.Rotate(Vector3.forward * (-_inputH * _currentRollSpeed * Time.deltaTime));
@@ -310,6 +319,20 @@ private void Movement()
                 _currentPitchSpeed = pitchSpeed;
                 _currentRollSpeed = rollSpeed;
             }
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Pared"))
+            {
+                StartCoroutine(Backward());
+            }
+        }
+
+        private IEnumerator Backward()
+        {
+            _isBackward = true;
+            yield return new WaitForSeconds(1f);
+            _isBackward = false;
         }
 
         private void DampVelocities()
