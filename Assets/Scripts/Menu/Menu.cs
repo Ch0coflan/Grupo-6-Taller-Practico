@@ -13,17 +13,18 @@ public class Menu : MonoBehaviour
     public GameObject lenguagePanel;
     public GameObject soundPanel;
     public GameObject pplPanel;
-    private GameObject selectedPlane = null;
+    [SerializeField] private GameObject selectedPlane = null;
     public Button startButton;
 
 
     public void Start()
     {
-        if (selectedPlane == null)
-    {
-        // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
-        return;
-    }
+        if (!selectedPlane)
+        {
+            // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
+            return;
+        }
+        
         prelobbyPanel.SetActive(false);
         creditsPanel.SetActive(false);
         optionsPanel.SetActive(false);
@@ -37,19 +38,19 @@ public class Menu : MonoBehaviour
     }
     
     public void SelectPlane(GameObject plane)
-{
-    Debug.Log("SelectPlane called. Plane: " + plane + ", Start Button: " + startButton);
-    selectedPlane = plane;
-    if (startButton != null)
     {
-        // Habilita el botón de inicio cuando se selecciona un avión
-        startButton.interactable = true;
+        Debug.Log("SelectPlane called. Plane: " + plane + ", Start Button: " + startButton);
+        selectedPlane = plane;
+        if (startButton)
+        {
+            // Habilita el botón de inicio cuando se selecciona un avión
+            startButton.interactable = true;
+        }
+        else
+        {
+            Debug.LogError("Start button is null");
+        }
     }
-    else
-    {
-        Debug.LogError("Start button is null");
-    }
-}
 
     public void ViewInitialization()
     {
@@ -58,6 +59,12 @@ public class Menu : MonoBehaviour
 
     public void OnClickPlayButton()
     {
+        if (!selectedPlane)
+        {
+            // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
+            return;
+        }
+        
         // Desactiva el panel actual
         pplPanel.SetActive(false);
 

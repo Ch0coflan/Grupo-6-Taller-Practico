@@ -2265,35 +2265,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d1ac1fb8bd9e94ebd5b58985f1c7ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  yawSpeed: 55
-  pitchSpeed: 35
-  rollSpeed: 35
-  yawTurboMultiplier: 0.3
-  pitchTurboMultiplier: 0.5
-  rollTurboMultiplier: 1
-  defaultSpeed: 20
-  turboSpeed: 20
-  accelerating: 10
-  dampingSpeed: 2
-  linearDampingSpeed: 2
-  turboHeatingSpeed: 0
-  turboCooldownSpeed: 0
-  turboHeat: 0
-  turboOverheatOver: 0
-  turboOverheat: 0
-  sidewaysMovement: 15
-  sidewaysMovementXRot: 0.012
-  sidewaysMovementYRot: 1.5
-  sidewaysMovementYPosition: 0.1
+  airplaneConfiguration: {fileID: 11400000, guid: ab6b42d6d41f24aeca49e4b4bd5461ae, type: 2}
   groundMask:
     serializedVersion: 2
-    m_Bits: 0
-  groundCheckDistance: 10
-  sideRayOffset: 5
-  groundCheckDistanceSide: 8
-  maxAngleSide: 10
-  alignmentSpeed: 2
-  _currentSpeed: 0
+    m_Bits: 8
+  currentSpeed: 0
 --- !u!54 &935325953
 Rigidbody:
   m_ObjectHideFlags: 0
