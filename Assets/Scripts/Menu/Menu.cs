@@ -1,5 +1,5 @@
 
-
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Menu : MonoBehaviour
@@ -13,9 +13,17 @@ public class Menu : MonoBehaviour
     public GameObject lenguagePanel;
     public GameObject soundPanel;
     public GameObject pplPanel;
-    
+    private GameObject selectedPlane = null;
+    public Button startButton;
+
+
     public void Start()
     {
+        if (selectedPlane == null)
+    {
+        // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
+        return;
+    }
         prelobbyPanel.SetActive(false);
         creditsPanel.SetActive(false);
         optionsPanel.SetActive(false);
@@ -24,9 +32,24 @@ public class Menu : MonoBehaviour
         lobbyHostPanel.SetActive(false);
         lobbyWestPanel.SetActive(false);
         pplPanel.SetActive(true);
+
+        startButton.interactable = false;
     }
     
-    
+    public void SelectPlane(GameObject plane)
+{
+    Debug.Log("SelectPlane called. Plane: " + plane + ", Start Button: " + startButton);
+    selectedPlane = plane;
+    if (startButton != null)
+    {
+        // Habilita el botón de inicio cuando se selecciona un avión
+        startButton.interactable = true;
+    }
+    else
+    {
+        Debug.LogError("Start button is null");
+    }
+}
 
     public void ViewInitialization()
     {
