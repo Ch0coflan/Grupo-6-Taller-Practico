@@ -1,4 +1,9 @@
+using MoreMountains.Feedbacks;
+using MoreMountains.FeedbacksForThirdParty;
 
+using System.Collections;
+using System.Collections.Generic;
+using MoreMountains.Tools;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -15,10 +20,56 @@ public class Menu : MonoBehaviour
     public GameObject pplPanel;
     [SerializeField] private GameObject selectedPlane = null;
     public Button startButton;
+    public Button creditsButton;
+    public Button optionsButton;
+    public Button lenguageButton;
+    public Button soundButton;  
+    public Button createCodeButton;
+    public Button enterCodeButton;
+    public Button backButton;
+    public Button backButton2;
+    public Button backButton3;
+    public Button backButton4;
+    public Button backButton5;
+    public Button backButton6;
+    public Button backButton7;
+    public Button backButton8;
+    public Button quitButton;
+    public Button backButton9;
+    public Button backButton10;
+    public Button plane1Button;
+    public Button plane2Button;
+    public Button plane3Button;
+
+    public AudioClip buttonClickSound; // Asigna esto en el inspector de Unity
+    public ParticleSystem buttonClickParticles; // Asigna esto en el inspector de Unity
+    
 
 
     public void Start()
     {
+        ConfigureButtonFeedbacks(startButton);
+        ConfigureButtonFeedbacks(creditsButton);
+        ConfigureButtonFeedbacks(optionsButton);
+        ConfigureButtonFeedbacks(lenguageButton);
+        ConfigureButtonFeedbacks(soundButton);
+        ConfigureButtonFeedbacks(createCodeButton);
+        ConfigureButtonFeedbacks(enterCodeButton);
+        ConfigureButtonFeedbacks(backButton);
+        ConfigureButtonFeedbacks(backButton2);
+        ConfigureButtonFeedbacks(backButton3);
+        ConfigureButtonFeedbacks(backButton4);
+        ConfigureButtonFeedbacks(backButton5);
+        ConfigureButtonFeedbacks(backButton6);
+        ConfigureButtonFeedbacks(backButton7);
+        ConfigureButtonFeedbacks(backButton8);
+        ConfigureButtonFeedbacks(quitButton);
+        ConfigureButtonFeedbacks(backButton9);
+        ConfigureButtonFeedbacks(backButton10);
+        ConfigureButtonFeedbacks(plane1Button);
+        ConfigureButtonFeedbacks(plane2Button);
+        ConfigureButtonFeedbacks(plane3Button);
+
         if (!selectedPlane)
         {
             // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
@@ -52,6 +103,31 @@ public class Menu : MonoBehaviour
         }
     }
 
+    void ConfigureButtonFeedbacks(Button button)
+{
+    // Asegúrate de que el botón tiene un componente MMFeedbacks
+    MMFeedbacks feedbacks = button.GetComponent<MMFeedbacks>();
+    if (feedbacks == null)
+    {
+        // Si no hay un componente MMFeedbacks, añádelo
+        feedbacks = button.gameObject.AddComponent<MMFeedbacks>();
+    }
+
+    // Añade un feedback de sonido al botón
+    MMFeedbackSound soundFeedback = button.gameObject.AddComponent<MMFeedbackSound>();
+    // Configura tu feedback de sonido aquí
+    // Por ejemplo, puedes establecer el clip de sonido y el volumen
+    soundFeedback.Sounds.Sound = buttonClickSound;
+    soundFeedback.Sounds.Volume = 1.0f;
+    feedbacks.AddFeedback(soundFeedback);
+
+    // Añade un feedback de partículas al botón
+    MMFeedbackParticles particlesFeedback = button.gameObject.AddComponent<MMFeedbackParticles>();
+    // Configura tu feedback de partículas aquí
+    // Por ejemplo, puedes establecer el sistema de partículas
+    particlesFeedback.ParticleSystem = buttonClickParticles;
+    feedbacks.AddFeedback(particlesFeedback);
+}
     public void ViewInitialization()
     {
         _classMenuController = FindObjectOfType<MenuController>();
