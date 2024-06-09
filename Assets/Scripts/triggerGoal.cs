@@ -9,7 +9,7 @@ public class triggerGoal : MonoBehaviour
         if(other.gameObject.CompareTag("Pelota"))
         {
             Debug.Log("Golazo");
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }
