@@ -103,31 +103,28 @@ public class Menu : MonoBehaviour
         }
     }
 
-    void ConfigureButtonFeedbacks(Button button)
-{
-    // Asegúrate de que el botón tiene un componente MMFeedbacks
-    MMFeedbacks feedbacks = button.GetComponent<MMFeedbacks>();
-    if (feedbacks == null)
+    private void ConfigureButtonFeedbacks(Button button)
     {
-        // Si no hay un componente MMFeedbacks, añádelo
-        feedbacks = button.gameObject.AddComponent<MMFeedbacks>();
+        if (button)
+        {
+            button.onClick.AddListener(() =>
+            {
+                if (buttonClickSound)
+                {
+                    SoundManager.Instance.PlaySound(buttonClickSound);
+                }
+
+                if (buttonClickParticles)
+                {
+                    buttonClickParticles.Play();
+                }
+            });
+        }
+        else
+        {
+            Debug.LogError("Button is null");
+        }
     }
-
-    // Añade un feedback de sonido al botón
-    MMFeedbackSound soundFeedback = button.gameObject.AddComponent<MMFeedbackSound>();
-    // Configura tu feedback de sonido aquí
-    // Por ejemplo, puedes establecer el clip de sonido y el volumen
-    soundFeedback.Sounds.Sound = buttonClickSound;
-    soundFeedback.Sounds.Volume = 1.0f;
-    feedbacks.AddFeedback(soundFeedback);
-
-    // Añade un feedback de partículas al botón
-    MMFeedbackParticles particlesFeedback = button.gameObject.AddComponent<MMFeedbackParticles>();
-    // Configura tu feedback de partículas aquí
-    // Por ejemplo, puedes establecer el sistema de partículas
-    particlesFeedback.ParticleSystem = buttonClickParticles;
-    feedbacks.AddFeedback(particlesFeedback);
-}
     public void ViewInitialization()
     {
         _classMenuController = FindObjectOfType<MenuController>();

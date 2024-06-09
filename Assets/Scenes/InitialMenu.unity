@@ -4514,7 +4514,30 @@ MonoBehaviour:
   lenguagePanel: {fileID: 249125676731457511}
   soundPanel: {fileID: 6330329666542888440}
   pplPanel: {fileID: 410721503275455993}
+  selectedPlane: {fileID: 0}
   startButton: {fileID: 5900543738186078640}
+  creditsButton: {fileID: 1142954636221008836}
+  optionsButton: {fileID: 4266829615343634369}
+  lenguageButton: {fileID: 6197408576803964004}
+  soundButton: {fileID: 7333261495757365286}
+  createCodeButton: {fileID: 5761826416353154598}
+  enterCodeButton: {fileID: 1168512989639211901}
+  backButton: {fileID: 4084063987207684388}
+  backButton2: {fileID: 958307536}
+  backButton3: {fileID: 0}
+  backButton4: {fileID: 0}
+  backButton5: {fileID: 0}
+  backButton6: {fileID: 0}
+  backButton7: {fileID: 0}
+  backButton8: {fileID: 0}
+  quitButton: {fileID: 0}
+  backButton9: {fileID: 0}
+  backButton10: {fileID: 0}
+  plane1Button: {fileID: 0}
+  plane2Button: {fileID: 0}
+  plane3Button: {fileID: 0}
+  buttonClickSound: {fileID: 8300000, guid: 801a894d272f24eb5ad28f5219e62bfe, type: 3}
+  buttonClickParticles: {fileID: 0}
 --- !u!1 &2875789574602540833
 GameObject:
   m_ObjectHideFlags: 0
@@ -7844,6 +7867,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6060394974859991624}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5947813081345070829
 GameObject:
   m_ObjectHideFlags: 0
@@ -8185,6 +8220,8 @@ GameObject:
   - component: {fileID: 2853940865841594039}
   - component: {fileID: 1938490029031019586}
   - component: {fileID: 2452261761554916586}
+  - component: {fileID: 6060394974859991626}
+  - component: {fileID: 6060394974859991625}
   m_Layer: 0
   m_Name: GameManagerMenu
   m_TagString: menu manager
@@ -8192,6 +8229,125 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6060394974859991625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060394974859991624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf25723e7c003d74399d0f62f1098637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  ShakeDuration: 0.01
+  PlayOnAwake: 0
+  PermanentShake: 0
+  Interruptible: 1
+  AlwaysResetTargetValuesAfterShake: 0
+  OnlyUseShakerValues: 0
+  CooldownBetweenShakes: 0
+  Shaking: 0
+  ForwardDirection: 1
+  TimescaleMode: 0
+--- !u!114 &6060394974859991626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060394974859991624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841b72de2996c5c40bfb394f3d0e0a98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Feedbacks: []
+  InitializationMode: 2
+  AutoInitialization: 1
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 0
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 1
+  OnlyPlayIfWithinRange: 0
+  RangeCenter: {fileID: 0}
+  RangeDistance: 5
+  UseRangeFalloff: 0
+  RangeFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapRangeFalloff: {x: 0, y: 1}
+  IgnoreRangeEvents: 0
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRevert:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRestoreInitialValues:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSkipToTheEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    OnEnable:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDisable:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
 --- !u!114 &6063227653159301314
 MonoBehaviour:
   m_ObjectHideFlags: 0
