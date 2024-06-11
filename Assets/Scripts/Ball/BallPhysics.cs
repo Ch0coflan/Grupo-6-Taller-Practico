@@ -13,6 +13,7 @@ namespace Airplane
         public float pushForce;
         public float masPushForce;
         private Rigidbody rb;
+        public int pointsToAdd = 1; 
 
         private void Start()
         {
@@ -49,6 +50,27 @@ namespace Airplane
                 Rigidbody playerRb = collision.gameObject.GetComponent<Rigidbody>();
                 float forceMagnitude = Mathf.Clamp(playerRb.velocity.magnitude * pushForce, pushForce, masPushForce);
                 rb.AddForce(pushDirection * forceMagnitude, ForceMode.Impulse);
+            }
+        }
+        private void OnTriggerEnter(Collider other)
+        {
+            GameplayUIController uiController = GameplayUIController.Instance;
+
+            if (other.CompareTag("ArcoA"))
+            {
+                // Sumar puntos al puntaje de A
+                if (uiController != null)
+                {
+                    uiController.AddScoreA(pointsToAdd);
+                }
+            }
+            else if (other.CompareTag("ArcoB"))
+            {
+                // Sumar puntos al puntaje de B
+                if (uiController != null)
+                {
+                    uiController.AddScoreB(pointsToAdd);
+                }
             }
         }
 
