@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Grupo-6-Taller-Practico/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Avion3U.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Avion3U.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BOTONES/Mesa de trabajo 1@2x.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BOTONES/Mesa de trabajo 1@2x.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BOTONES/Mesa de trabajo 1@2x.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/BOTONES/Mesa de trabajo 1@2x.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Fonts/Potato_sans-Bold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Fonts/Potato_sans-Bold SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/InitialMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/InitialMenu.unity" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hud.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hud/Timer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hud/Timer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Texturas/TowerTextures/Roca/Rock024_2K-JPG_NormalGL.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Texturas/TowerTextures/Roca/Rock024_2K-JPG_NormalGL.jpg.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SantiNew.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SantiNew.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Menu/Menu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +37,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Features-Santiago",
+    "git-widget-placeholder": "Merging Features-Santiago",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -134,7 +127,7 @@
       <workItem from="1717624274375" duration="606000" />
       <workItem from="1717795948997" duration="3656000" />
       <workItem from="1717892726906" duration="232000" />
-      <workItem from="1718134090699" duration="1135000" />
+      <workItem from="1718134090699" duration="1774000" />
     </task>
     <servers />
   </component>
