@@ -1,3 +1,4 @@
+using System;
 using MoreMountains.Feedbacks;
 using MoreMountains.FeedbacksForThirdParty;
 
@@ -18,6 +19,7 @@ public class Menu : MonoBehaviour
     public GameObject lenguagePanel;
     public GameObject soundPanel;
     public GameObject pplPanel;
+    public Image credits;
     [SerializeField] private GameObject selectedPlane = null;
     public Button startButton;
     public Button creditsButton;
@@ -87,7 +89,16 @@ public class Menu : MonoBehaviour
 
         startButton.interactable = false;
     }
-    
+
+    private void Update()
+    {
+        var color = credits.color;
+        color.a = 255f;
+        credits.color = color;
+
+        credits.color = Color.white;
+    }
+
     public void SelectPlane(GameObject plane)
     {
         Debug.Log("SelectPlane called. Plane: " + plane + ", Start Button: " + startButton);
@@ -234,6 +245,8 @@ public class Menu : MonoBehaviour
         
         // Desactiva el panel de Opciones (con la etiqueta "Window6")
         pplPanel.SetActive(true);
+        
+        
         
         Debug.Log("Go Back Credits button clicked");
     }
