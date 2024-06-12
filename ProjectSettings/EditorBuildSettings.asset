@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/SantiNew.unity
+    guid: 980006f5edaf4fc46aab8d9fac7df40b
   m_configObjects: {}

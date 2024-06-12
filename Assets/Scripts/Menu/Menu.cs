@@ -1,10 +1,3 @@
-using System;
-using MoreMountains.Feedbacks;
-using MoreMountains.FeedbacksForThirdParty;
-
-using System.Collections;
-using System.Collections.Generic;
-using MoreMountains.Tools;
 using UnityEngine.UI;
 using UnityEngine;
 

@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6305cfa8b004d2390f6df5291d91123, type: 3}
   m_Name: Airplane2
   m_EditorClassIdentifier: 
-  yawSpeed: 21
-  pitchSpeed: 57
-  rollSpeed: 105
+  yawSpeed: 28
+  pitchSpeed: 51
+  rollSpeed: 86
   yawTurboMultiplier: 0.3
   pitchTurboMultiplier: 0.5
   rollTurboMultiplier: 1
