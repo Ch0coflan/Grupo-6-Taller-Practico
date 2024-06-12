@@ -18,6 +18,8 @@ TagManager:
   - ArcoA
   - ArcoB
   - Obstacle
+  - Pared
+  - Pelota
   layers:
   - Default
   - TransparentFX

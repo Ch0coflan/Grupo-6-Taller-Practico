@@ -13,8 +13,8 @@ namespace Airplane
         [SerializeField] private LayerMask groundMask;
         [SerializeField] private float currentSpeed;
         
-        private float _maxSpeed;
-        private float _minSpeed;
+        public float _maxSpeed;
+        public float _minSpeed;
         private float _speedMultiplier;
         private float _currentYawSpeed;
         private float _currentPitchSpeed;
@@ -41,8 +41,8 @@ namespace Airplane
             _rb = GetComponent<Rigidbody>();
             _rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
-            _minSpeed = 50f;
-            _maxSpeed = 100f;
+            _minSpeed = 5f;
+            _maxSpeed = 50f;
             currentSpeed = airplaneConfiguration.defaultSpeed;
             _speedMultiplier = 1;
         }
