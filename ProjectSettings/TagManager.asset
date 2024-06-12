@@ -17,6 +17,7 @@ TagManager:
   - AirPlane
   - ArcoA
   - ArcoB
+  - Obstacle
   layers:
   - Default
   - TransparentFX
