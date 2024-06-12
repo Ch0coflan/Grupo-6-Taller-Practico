@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="" />
+    <list default="true" id="81956175-22a7-4994-a67b-424fcb2f8f57" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hud.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hud/Timer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Hud/Timer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Texturas/TowerTextures/Roca/Rock024_2K-JPG_NormalGL.jpg.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Texturas/TowerTextures/Roca/Rock024_2K-JPG_NormalGL.jpg.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SantiNew.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SantiNew.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball/BallPhysics.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.9.7/Runtime/Behaviours/CinemachineFreeLook.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -27,26 +34,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Features-Santiago&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging Features-Santiago",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\PC-16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\PC-16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\PC-16\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\PC-16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\PC-16\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\PC-16\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.14f1\Editor\Unity.exe" />
@@ -101,6 +108,30 @@
       <workItem from="1716407257241" duration="5505000" />
       <workItem from="1716472424912" duration="5938000" />
       <workItem from="1716560567552" duration="737000" />
+      <workItem from="1716583751963" duration="2249000" />
+      <workItem from="1716818809006" duration="3580000" />
+      <workItem from="1716922332698" duration="557000" />
+      <workItem from="1716924380669" duration="3147000" />
+      <workItem from="1717096179394" duration="600000" />
+      <workItem from="1717246532057" duration="2779000" />
+      <workItem from="1717276740425" duration="4836000" />
+      <workItem from="1717306419479" duration="83000" />
+      <workItem from="1717306572092" duration="6312000" />
+      <workItem from="1717346738609" duration="322000" />
+      <workItem from="1717388170201" duration="609000" />
+      <workItem from="1717391332673" duration="6000" />
+      <workItem from="1717391347467" duration="3887000" />
+      <workItem from="1717511334255" duration="4828000" />
+      <workItem from="1717527845997" duration="5811000" />
+      <workItem from="1717623623446" duration="484000" />
+<<<<<<< Updated upstream
+      <workItem from="1717624274375" duration="606000" />
+      <workItem from="1717795948997" duration="3656000" />
+      <workItem from="1717892726906" duration="232000" />
+      <workItem from="1718134090699" duration="1774000" />
+=======
+      <workItem from="1717624274375" duration="632000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
