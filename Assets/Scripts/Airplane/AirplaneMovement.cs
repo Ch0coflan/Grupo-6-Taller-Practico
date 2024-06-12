@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Airplane
@@ -11,7 +12,7 @@ namespace Airplane
         #region Private Variables
 
         [SerializeField] private LayerMask groundMask;
-        [SerializeField] private float currentSpeed;
+        [SerializeField] private float _currentSpeed;
         
         public float _maxSpeed;
         public float _minSpeed;
@@ -33,6 +34,7 @@ namespace Airplane
         private bool _inputTurbo;
         private bool _inputYawLeft;
         private bool _inputYawRight;
+        private bool _isBackward;
         
         #endregion
 
@@ -43,7 +45,7 @@ namespace Airplane
 
             _minSpeed = 5f;
             _maxSpeed = 50f;
-            currentSpeed = airplaneConfiguration.defaultSpeed;
+            _currentSpeed = airplaneConfiguration.defaultSpeed;
             _speedMultiplier = 1;
         }
 
@@ -133,25 +135,32 @@ namespace Airplane
 
         public void Acceleration()
         {
-            if (Input.GetMouseButton(0) && currentSpeed < _maxSpeed)
+            if (Input.GetMouseButton(0) && _currentSpeed < _maxSpeed)
             {
-                currentSpeed += airplaneConfiguration.accelerating * Time.deltaTime;
+                _currentSpeed += airplaneConfiguration.accelerating * Time.deltaTime;
                 // Asegurarse de que la velocidad no exceda _maxSpeed
-                currentSpeed = Mathf.Min(currentSpeed, _maxSpeed);
+                _currentSpeed = Mathf.Min(_currentSpeed, _maxSpeed);
             }
 
-            if (Input.GetMouseButton(1) && currentSpeed > _minSpeed)
+            if (Input.GetMouseButton(1) && _currentSpeed > _minSpeed)
             {
-                currentSpeed -= airplaneConfiguration.accelerating * Time.deltaTime;
+                _currentSpeed -= airplaneConfiguration.accelerating * Time.deltaTime;
                 // Asegurarse de que la velocidad no caiga por debajo de _minSpeed
-                currentSpeed = Mathf.Max(currentSpeed, _minSpeed);
+                _currentSpeed = Mathf.Max(_currentSpeed, _minSpeed);
             }
         }
 
 private void Movement()
         {
             // Move forward
-            _rb.velocity = transform.forward * currentSpeed;
+            if (_isBackward)
+            {
+                _rb.velocity = transform.forward * -_currentSpeed;
+            }
+            else
+            {
+                _rb.velocity = transform.forward * _currentSpeed;
+            }
 
             // Rotate airplane by inputs
             transform.Rotate(Vector3.forward * (-_inputH * _currentRollSpeed * Time.deltaTime));
@@ -229,6 +238,21 @@ private void Movement()
                 _currentPitchSpeed = airplaneConfiguration.pitchSpeed;
                 _currentRollSpeed = airplaneConfiguration.rollSpeed;
             }
+        }
+        private void OnCollisionEnter(Collision collision)
+        {
+            if (collision.gameObject.CompareTag("Pared"))
+            {
+                StartCoroutine(Backward());
+                Debug.Log("pared detectada");
+            }
+        }
+
+        private IEnumerator Backward()
+        {
+            _isBackward = true;
+            yield return new WaitForSeconds(2f);
+            _isBackward = false;
         }
 
         private void DampVelocities()
