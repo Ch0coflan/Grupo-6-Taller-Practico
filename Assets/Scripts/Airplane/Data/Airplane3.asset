@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6305cfa8b004d2390f6df5291d91123, type: 3}
+  m_Name: Airplane3
+  m_EditorClassIdentifier: 
+  yawSpeed: 21
+  pitchSpeed: 57
+  rollSpeed: 105
+  yawTurboMultiplier: 0.3
+  pitchTurboMultiplier: 0.5
+  rollTurboMultiplier: 1
+  defaultSpeed: 15
+  turboSpeed: 20
+  accelerating: 10
+  dampingSpeed: 2
+  linearDampingSpeed: 2
+  turboCooldownSpeed: 0
+  turboOverheatOver: 0
+  sidewaysMovement: 15
+  sidewaysMovementXRot: 0.012
+  sidewaysMovementYRot: 1.5
+  sidewaysMovementYPosition: 0.1
+  groundCheckDistance: 10
+  sideRayOffset: 5
+  groundCheckDistanceSide: 8
+  maxAngleSide: 10
+  alignmentSpeed: 2
