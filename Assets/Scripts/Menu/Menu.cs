@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
@@ -15,56 +16,18 @@ public class Menu : MonoBehaviour
     public Image credits;
     [SerializeField] private GameObject selectedPlane = null;
     public Button startButton;
-    public Button creditsButton;
-    public Button optionsButton;
-    public Button lenguageButton;
-    public Button soundButton;  
-    public Button createCodeButton;
-    public Button enterCodeButton;
-    public Button backButton;
-    public Button backButton2;
-    public Button backButton3;
-    public Button backButton4;
-    public Button backButton5;
-    public Button backButton6;
-    public Button backButton7;
-    public Button backButton8;
-    public Button quitButton;
-    public Button backButton9;
-    public Button backButton10;
-    public Button plane1Button;
-    public Button plane2Button;
-    public Button plane3Button;
+    public List<Button> buttons;
 
-    public AudioClip buttonClickSound; // Asigna esto en el inspector de Unity
     public ParticleSystem buttonClickParticles; // Asigna esto en el inspector de Unity
     
 
 
     public void Start()
     {
-        ConfigureButtonFeedbacks(startButton);
-        ConfigureButtonFeedbacks(creditsButton);
-        ConfigureButtonFeedbacks(optionsButton);
-        ConfigureButtonFeedbacks(lenguageButton);
-        ConfigureButtonFeedbacks(soundButton);
-        ConfigureButtonFeedbacks(createCodeButton);
-        ConfigureButtonFeedbacks(enterCodeButton);
-        ConfigureButtonFeedbacks(backButton);
-        ConfigureButtonFeedbacks(backButton2);
-        ConfigureButtonFeedbacks(backButton3);
-        ConfigureButtonFeedbacks(backButton4);
-        ConfigureButtonFeedbacks(backButton5);
-        ConfigureButtonFeedbacks(backButton6);
-        ConfigureButtonFeedbacks(backButton7);
-        ConfigureButtonFeedbacks(backButton8);
-        ConfigureButtonFeedbacks(quitButton);
-        ConfigureButtonFeedbacks(backButton9);
-        ConfigureButtonFeedbacks(backButton10);
-        ConfigureButtonFeedbacks(plane1Button);
-        ConfigureButtonFeedbacks(plane2Button);
-        ConfigureButtonFeedbacks(plane3Button);
+        AudioManager.Instance.PlayMusic("Inicio");
 
+        SetUpSoundButton();
+        
         if (!selectedPlane)
         {
             // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
@@ -81,6 +44,19 @@ public class Menu : MonoBehaviour
         pplPanel.SetActive(true);
 
         startButton.interactable = false;
+    }
+
+    private void SetUpSoundButton()
+    {
+        foreach (Button button in buttons)
+        {
+            button.onClick.AddListener(
+                () =>
+                {
+                    AudioManager.Instance.PlaySfx("ClickButton");
+                }
+            );
+        }
     }
 
     private void Update()
@@ -106,29 +82,7 @@ public class Menu : MonoBehaviour
             Debug.LogError("Start button is null");
         }
     }
-
-    private void ConfigureButtonFeedbacks(Button button)
-    {
-        if (button)
-        {
-            button.onClick.AddListener(() =>
-            {
-                if (buttonClickSound)
-                {
-                    SoundManager.Instance.PlaySound(buttonClickSound);
-                }
-
-                if (buttonClickParticles)
-                {
-                    buttonClickParticles.Play();
-                }
-            });
-        }
-        else
-        {
-            Debug.LogError("Button is null");
-        }
-    }
+    
     public void ViewInitialization()
     {
         _classMenuController = FindObjectOfType<MenuController>();

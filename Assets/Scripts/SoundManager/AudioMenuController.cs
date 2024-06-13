@@ -11,9 +11,9 @@ public class AudioMenuController : MonoBehaviour
     [SerializeField] public Slider _musicSlider;
     [SerializeField] public Slider _sfxSlider;
     [SerializeField] public Slider _masterSlider;
-    [SerializeField] public Slider _musicButton;
-    [SerializeField] public Slider _sfxButton;
-    [SerializeField] public Slider _masterButton;
+    [SerializeField] public Toggle _musicButton;
+    [SerializeField] public Toggle _sfxButton;
+    [SerializeField] public Toggle _masterButton;
 
     private void Start()
     {
@@ -37,7 +37,6 @@ public class AudioMenuController : MonoBehaviour
         SetMusicVolume();
         SetSfxVolume();
         SetMasterVolume();
-        
     }
 
     public void ToggleMusic()
@@ -58,14 +57,14 @@ public class AudioMenuController : MonoBehaviour
     public void SetMusicVolume()
     {
         float volume = _musicSlider.value;
-        myMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
+        myMixer.SetFloat("MUSIC", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
     
     public void SetMasterVolume()
     {
         float volume = _masterSlider.value;
-        myMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
+        myMixer.SetFloat("MASTER", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("masterVolume", volume);
     }
     
