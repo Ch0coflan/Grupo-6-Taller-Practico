@@ -174,7 +174,9 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 6941f5a92e8049148a55a0fd53c4e29b, type: 3}
   - name: GamePlay
     clip: {fileID: 8300000, guid: 54b362f828cc048f5adc221b795cb2b2, type: 3}
-  sfxSounds: []
+  sfxSounds:
+  - name: ClickButton
+    clip: {fileID: 8300000, guid: a0250002c3e4d514ba0533b1eac00675, type: 3}
   musicSource: {fileID: 323142962}
   sfxSource: {fileID: 2021931199}
 --- !u!1 &273235903
@@ -4672,26 +4674,21 @@ MonoBehaviour:
   credits: {fileID: 424199596369244420}
   selectedPlane: {fileID: 0}
   startButton: {fileID: 5900543738186078640}
-  creditsButton: {fileID: 1142954636221008836}
-  optionsButton: {fileID: 4266829615343634369}
-  lenguageButton: {fileID: 0}
-  soundButton: {fileID: 7333261495757365286}
-  createCodeButton: {fileID: 5761826416353154598}
-  enterCodeButton: {fileID: 1168512989639211901}
-  backButton: {fileID: 4084063987207684388}
-  backButton2: {fileID: 958307536}
-  backButton3: {fileID: 0}
-  backButton4: {fileID: 0}
-  backButton5: {fileID: 0}
-  backButton6: {fileID: 0}
-  backButton7: {fileID: 0}
-  backButton8: {fileID: 0}
-  quitButton: {fileID: 0}
-  backButton9: {fileID: 0}
-  backButton10: {fileID: 0}
-  plane1Button: {fileID: 0}
-  plane2Button: {fileID: 0}
-  plane3Button: {fileID: 0}
+  buttons:
+  - {fileID: 5900543738186078640}
+  - {fileID: 1142954636221008836}
+  - {fileID: 4266829615343634369}
+  - {fileID: 3024537635049049846}
+  - {fileID: 7276676693357774098}
+  - {fileID: 7198573518086298530}
+  - {fileID: 815771283}
+  - {fileID: 5761826416353154598}
+  - {fileID: 1168512989639211901}
+  - {fileID: 4084063987207684388}
+  - {fileID: 958307536}
+  - {fileID: 6449615258555753750}
+  - {fileID: 2495470724813731249}
+  - {fileID: 1425354348876321526}
   buttonClickParticles: {fileID: 0}
 --- !u!1 &2875789574602540833
 GameObject:
