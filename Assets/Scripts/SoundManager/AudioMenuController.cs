@@ -19,7 +19,7 @@ public class AudioMenuController : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("musicVolume") && PlayerPrefs.HasKey("sfxVolume"))
         {
-            loadVolume();
+            LoadVolume();
         }
         else
         {

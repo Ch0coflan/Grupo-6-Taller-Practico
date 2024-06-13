@@ -18,9 +18,9 @@ MonoBehaviour:
   yawTurboMultiplier: 0.3
   pitchTurboMultiplier: 0.5
   rollTurboMultiplier: 1
-  defaultSpeed: 10
-  turboSpeed: 20
-  accelerating: 10
+  defaultSpeed: 28
+  turboSpeed: 35
+  accelerating: 15
   dampingSpeed: 2
   linearDampingSpeed: 2
   turboCooldownSpeed: 0
