@@ -2980,10 +2980,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971c19f45a557a641a50c3f8ed71fc7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  horizontal: 0
+  speed: 8
+  jumpingPower: 16
+  isFacingRight: 1
   rb: {fileID: 1829132703}
   groundCheck: {fileID: 1432322713}
   groundLayer:
-    serializedVersion: 2
     m_Bits: 64
 --- !u!61 &1829132702
 BoxCollider2D:
