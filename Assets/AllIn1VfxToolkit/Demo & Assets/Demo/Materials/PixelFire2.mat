@@ -259,7 +259,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: z_ColorRampTexGradientTex{"mode":0,"colorKeys":[{"color":{"r":0.1512395292520523,"g":0.3679245114326477,"b":0.0,"a":1.0},"time":0.20294499397277833},{"color":{"r":0.7145839929580689,"g":1.0,"b":0.1933962106704712,"a":1.0},"time":0.8588235378265381},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_Name: z_ColorRampTexGradientTex{"mode":0,"colorKeys":[{"color":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.994125247001648}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -295,7 +295,7 @@ Texture2D:
   m_ColorSpace: 0
   m_PlatformBlob: 
   image data: 256
-  _typelessdata: 275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275e00ff275f00ff2b6301ff2e6603ff326a04ff356e05ff397206ff3c7607ff407a09ff437e0aff47820bff4a860cff4e8a0dff518d0fff559110ff589511ff5b9912ff5f9d13ff62a115ff66a516ff69a917ff6dad18ff70b119ff74b41bff77b81cff7bbc1dff7ec01eff82c41fff85c820ff89cc22ff8cd023ff90d424ff93d825ff97db26ff9adf28ff9ee329ffa1e72affa4eb2bffa8ef2cffabf32effaff72fffb2fb30ffb6ff31ffbeff46ffc6ff5dffceff74ffd6ff8bffdeffa2ffe6ffbaffefffd1fff7ffe8ffffffffff
+  _typelessdata: ff0000ffff0404ffff0808ffff0c0cffff1010ffff1414ffff1818ffff1d1dffff2121ffff2525ffff2929ffff2d2dffff3131ffff3535ffff3939ffff3d3dffff4141ffff4545ffff4949ffff4d4dffff5151ffff5656ffff5a5affff5e5effff6262ffff6666ffff6a6affff6e6effff7272ffff7676ffff7a7affff7e7effff8282ffff8686ffff8a8affff8f8fffff9393ffff9797ffff9b9bffff9f9fffffa3a3ffffa7a7ffffababffffafafffffb3b3ffffb7b7ffffbbbbffffbfbfffffc3c3ffffc8c8ffffccccffffd0d0ffffd4d4ffffd8d8ffffdcdcffffe0e0ffffe4e4ffffe8e8ffffececfffff0f0fffff4f4fffff8f8fffffcfcffffffffff
   m_StreamData:
     serializedVersion: 2
     offset: 0

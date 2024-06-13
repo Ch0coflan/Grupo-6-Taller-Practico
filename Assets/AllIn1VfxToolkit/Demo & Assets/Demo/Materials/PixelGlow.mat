@@ -258,7 +258,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: z_ColorRampTexGradientTex{"mode":0,"colorKeys":[{"color":{"r":0.021645374596118928,"g":0.5754716992378235,"b":0.0,"a":1.0},"time":0.42058441042900088},{"color":{"r":0.8149687647819519,"g":0.9056603908538818,"b":0.0,"a":1.0},"time":0.7852903008460999},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_Name: z_ColorRampTexGradientTex{"mode":0,"colorKeys":[{"color":{"r":1.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.994125247001648}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -294,7 +294,7 @@ Texture2D:
   m_ColorSpace: 0
   m_PlatformBlob: 
   image data: 256
-  _typelessdata: 069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff069300ff0a9500ff139800ff1c9c00ff24a000ff2da300ff36a700ff3fab00ff48ae00ff50b200ff59b600ff62b900ff6bbd00ff74c100ff7cc400ff85c800ff8ecc00ff97cf00ffa0d300ffa8d700ffb1da00ffbade00ffc3e200ffcce500ffd2e80affd5ea1dffd9eb30ffdced42ffe0ef55ffe3f168ffe7f37bffeaf48effeef6a1fff1f8b4fff5fac6fff8fbd9fffcfdecffffffffff
+  _typelessdata: ff0000ffff0404ffff0808ffff0c0cffff1010ffff1414ffff1818ffff1d1dffff2121ffff2525ffff2929ffff2d2dffff3131ffff3535ffff3939ffff3d3dffff4141ffff4545ffff4949ffff4d4dffff5151ffff5656ffff5a5affff5e5effff6262ffff6666ffff6a6affff6e6effff7272ffff7676ffff7a7affff7e7effff8282ffff8686ffff8a8affff8f8fffff9393ffff9797ffff9b9bffff9f9fffffa3a3ffffa7a7ffffababffffafafffffb3b3ffffb7b7ffffbbbbffffbfbfffffc3c3ffffc8c8ffffccccffffd0d0ffffd4d4ffffd8d8ffffdcdcffffe0e0ffffe4e4ffffe8e8ffffececfffff0f0fffff4f4fffff8f8fffffcfcffffffffff
   m_StreamData:
     serializedVersion: 2
     offset: 0

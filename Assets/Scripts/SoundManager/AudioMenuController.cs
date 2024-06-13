@@ -58,21 +58,21 @@ public class AudioMenuController : MonoBehaviour
     public void SetMusicVolume()
     {
         float volume = _musicSlider.value;
-        myMixer.SetFloat("music", Mathf.Log10(volume) * 20);
+        myMixer.SetFloat("Music", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("musicVolume", volume);
     }
     
     public void SetMasterVolume()
     {
         float volume = _masterSlider.value;
-        myMixer.SetFloat("master", Mathf.Log10(volume) * 20);
+        myMixer.SetFloat("Master", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("masterVolume", volume);
     }
     
     public void SetSfxVolume()
     {
         float volume = _sfxSlider.value;
-        myMixer.SetFloat("sfx", Mathf.Log10(volume) * 20);
+        myMixer.SetFloat("SFX", Mathf.Log10(volume) * 20);
         PlayerPrefs.SetFloat("sfxVolume", volume);
     }
 
