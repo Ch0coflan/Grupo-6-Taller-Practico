@@ -88,11 +88,11 @@ public class Menu : MonoBehaviour
 
     public void OnClickPlayButton()
     {
-        if (!selectedPlane)
-        {
-            // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
-            return;
-        }
+        // if (!selectedPlane)
+        // {
+        //     // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
+        //     return;
+        // }
         
         // Desactiva el panel actual
         pplPanel.SetActive(false);
