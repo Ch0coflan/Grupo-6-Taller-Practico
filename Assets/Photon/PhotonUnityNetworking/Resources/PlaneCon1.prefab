@@ -555,7 +555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3849759371582442171}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.030610302, y: -0.000000002055273, z: -6.294203e-11, w: 0.9995314}
+  m_LocalRotation: {x: -0.030610302, y: -0.00000000214979, z: -6.5836565e-11, w: 0.9995314}
   m_LocalPosition: {x: 0, y: 6.220001, z: -53.140015}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
@@ -774,7 +774,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4866933367518280103}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.030947534, y: -0.0000000359274, z: -0.0000000015591245, w: 0.9995211}
+  m_LocalRotation: {x: -0.030947534, y: 0.0000000019433166, z: 5.563201e-10, w: 0.9995211}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1028,13 +1028,14 @@ GameObject:
   - component: {fileID: 8644716273641715736}
   - component: {fileID: 7200995107534207787}
   - component: {fileID: 1653385161379639759}
+  - component: {fileID: 5071260200720176452}
   m_Layer: 0
   m_Name: PlaneCon1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8928574154388556762
 Transform:
   m_ObjectHideFlags: 0
@@ -1098,6 +1099,7 @@ MonoBehaviour:
   _currentSpeed: 0
   _maxSpeed: 30
   _minSpeed: 5
+  cameraPlayer: {fileID: 7026372983223344473}
 --- !u!114 &7200995107534207787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1154,6 +1156,23 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &5071260200720176452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5701334172913778790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd08475b23aa548b7b9d28397d430b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  distance: 7
+  height: 3
+  centerOffset: {x: 0, y: 0, z: 0}
+  followOnStart: 0
+  smoothSpeed: 0.125
 --- !u!1 &6107754712961406157
 GameObject:
   m_ObjectHideFlags: 3
@@ -1179,7 +1198,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6107754712961406157}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.014494076, y: -0.00000003546839, z: 7.9820206e-11, w: 0.999895}
+  m_LocalRotation: {x: 0.014494076, y: -0.000000032577702, z: 1.09753234e-10, w: 0.999895}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1767,7 +1786,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8658222391010635187}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.018189492, y: -0.000000020447311, z: -4.3310483e-10, w: 0.9998346}
+  m_LocalRotation: {x: -0.018189492, y: -0.000000016448372, z: -2.608854e-10, w: 0.9998346}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

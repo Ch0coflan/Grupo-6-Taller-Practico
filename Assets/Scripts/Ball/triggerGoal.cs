@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class triggerGoal : MonoBehaviour
 {
+    
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("Pelota"))
         {
             Debug.Log("Golazo");
             Destroy(gameObject);
+            
+            }
         }
+   
+        
+
+        
     }
-}
+
