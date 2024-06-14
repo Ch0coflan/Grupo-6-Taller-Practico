@@ -106,7 +106,6 @@ MonoBehaviour:
   customGravity: -9.8
   pushForce: 0
   masPushForce: 0
-  pointsToAdd: 1
 --- !u!54 &3382256992480458819
 Rigidbody:
   m_ObjectHideFlags: 0
