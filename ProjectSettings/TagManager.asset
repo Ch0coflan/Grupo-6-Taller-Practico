@@ -20,6 +20,8 @@ TagManager:
   - Obstacle
   - Pared
   - Pelota
+  - Bullet
+  - GameOver
   layers:
   - Default
   - TransparentFX
