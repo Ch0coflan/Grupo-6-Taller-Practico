@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -326,7 +326,7 @@ GameObject:
   - component: {fileID: 65191335}
   - component: {fileID: 65191334}
   m_Layer: 5
-  m_Name: InputField (TMP)
+  m_Name: Lobby CODE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1384,6 +1384,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 820773675}
+  - component: {fileID: 820773676}
+  - component: {fileID: 820773677}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -1406,6 +1408,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &820773676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820773674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f755d13f407c1de48ab5c8a582dde631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &820773677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820773674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2725affe389bbae4a96b1ee68c6a8e18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lobby: {fileID: 65191334}
+  menu: {fileID: 2853940865841594039}
 --- !u!1 &864307897
 GameObject:
   m_ObjectHideFlags: 0
@@ -2152,8 +2180,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b84ad172c38240e44be94dbcf054f2a5, type: 2}
-  m_sharedMaterial: {fileID: -8379294273584926029, guid: b84ad172c38240e44be94dbcf054f2a5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3450,8 +3478,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: asdasdasdasdasdasdasdas
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b84ad172c38240e44be94dbcf054f2a5, type: 2}
-  m_sharedMaterial: {fileID: -8379294273584926029, guid: b84ad172c38240e44be94dbcf054f2a5, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
+  m_sharedMaterial: {fileID: 2147374, guid: 0161d805a3764c089bef00bfe00793f5, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3475,7 +3503,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 64.1
+  m_fontSize: 53.65
   m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3825,7 +3853,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 207, y: 249}
+  m_AnchoredPosition: {x: 248.94176, y: 100.89319}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1818975404
@@ -3848,7 +3876,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: LOBBY
+  m_text: LOADING ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b84ad172c38240e44be94dbcf054f2a5, type: 2}
   m_sharedMaterial: {fileID: -8379294273584926029, guid: b84ad172c38240e44be94dbcf054f2a5, type: 2}
@@ -3875,8 +3903,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 270.6
-  m_fontSizeBase: 270.6
+  m_fontSize: 150
+  m_fontSizeBase: 150
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3972,7 +4000,6 @@ GameObject:
   - component: {fileID: 1912595796}
   - component: {fileID: 1912595799}
   - component: {fileID: 1912595798}
-  - component: {fileID: 1912595797}
   m_Layer: 5
   m_Name: Charge
   m_TagString: Window5
@@ -4001,18 +4028,6 @@ RectTransform:
   m_AnchoredPosition: {x: 2103.1643, y: 765.5299}
   m_SizeDelta: {x: 3840, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1912595797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1912595795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e75fd821e5874b4b94178cab583c47e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1912595798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4878,6 +4893,7 @@ GameObject:
   - component: {fileID: 3960827102557553149}
   - component: {fileID: 3843607477442370196}
   - component: {fileID: 1652967219888080681}
+  - component: {fileID: 4317260778459443644}
   m_Layer: 5
   m_Name: _lobbyPanel
   m_TagString: Window3
@@ -5291,6 +5307,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2853940865841594039}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: OnClickCreateEnterCodeButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 820773677}
+        m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
+        m_MethodName: JoinLobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7215,6 +7243,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 820773676}
+        m_TargetAssemblyTypeName: Launcher, Assembly-CSharp
+        m_MethodName: DisconnectLobby
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &4136529830403215920
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7364,6 +7404,20 @@ RectTransform:
   m_AnchoredPosition: {x: 2103.1643, y: 765.5299}
   m_SizeDelta: {x: 3840, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4317260778459443644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 757279178764508258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19722e9c27184a14282bf00da44d1fe1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1684711790}
+  inputField: {fileID: 65191334}
 --- !u!222 &4338015651447291483
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8477,6 +8531,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 820773677}
+        m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
+        m_MethodName: CreateLobby
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5766138757175282847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8581,6 +8647,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2853940865841594039}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
         m_MethodName: OnClickPlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 820773676}
+        m_TargetAssemblyTypeName: Launcher, Assembly-CSharp
+        m_MethodName: StartNetwork
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8718,6 +8796,7 @@ GameObject:
   - component: {fileID: 2853940865841594039}
   - component: {fileID: 1938490029031019586}
   - component: {fileID: 2452261761554916586}
+  - component: {fileID: 6060394974859991625}
   m_Layer: 0
   m_Name: GameManagerMenu
   m_TagString: menu manager
@@ -8725,6 +8804,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6060394974859991625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6060394974859991624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 246dbf956d20d6c42b2b729f3aea4902, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chargePanel: {fileID: 1912595795}
 --- !u!224 &6141813667568896734
 RectTransform:
   m_ObjectHideFlags: 0
