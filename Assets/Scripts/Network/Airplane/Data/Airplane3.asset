@@ -23,8 +23,8 @@ MonoBehaviour:
   accelerating: 15
   dampingSpeed: 2
   linearDampingSpeed: 2
-  turboCooldownSpeed: 0
-  turboOverheatOver: 0
+  turboCooldownSpeed: 24.9
+  turboOverheatOver: 24.9
   sidewaysMovement: 15
   sidewaysMovementXRot: 0.012
   sidewaysMovementYRot: 1.5
