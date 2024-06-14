@@ -7,20 +7,23 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 {
     public TMP_InputField lobby;
     public Menu menu;
+
+    public string roomName;
+    private string RoomName => roomName = lobby.text == "" ? "NoID" : lobby.text;
     
     public void CreateLobby()
     {
         RoomOptions roomOptions = new RoomOptions();
         roomOptions.MaxPlayers = 2;
-        PhotonNetwork.CreateRoom(lobby.text, roomOptions);
-        Debug.Log("Creando sala... " + lobby.text);
+        PhotonNetwork.CreateRoom(RoomName, roomOptions);
+        Debug.Log("Creando sala... " + RoomName);
         LoadingArea.Instance.ShowLoading();
     }
 
     public void JoinLobby()
     {
-        PhotonNetwork.JoinRoom(lobby.text);
-        Debug.Log("Uniendose a " + lobby.text);
+        PhotonNetwork.JoinRoom(RoomName);
+        Debug.Log("Uniendose a " + RoomName);
         LoadingArea.Instance.ShowLoading();
     }
 

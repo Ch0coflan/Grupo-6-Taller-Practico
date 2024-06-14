@@ -4,10 +4,10 @@ using UnityEngine;
 public class LoadRoom : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
-    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private LobbyManager lobbyManager;
     
     private void OnEnable()
     {
-        text.text = inputField.text;
+        text.text = lobbyManager.roomName;
     }
 }
