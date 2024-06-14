@@ -1,10 +1,11 @@
 using System.Collections;
 using UnityEngine;
+using Photon.Pun;
 
 namespace Airplane
 {
     [RequireComponent(typeof(Rigidbody))]
-    public class AirplaneMovement : MonoBehaviour
+    public class AirplaneMovement : MonoBehaviourPunCallbacks
     {
 
         [SerializeField] private AirplaneConfiguration airplaneConfiguration;
@@ -27,6 +28,7 @@ namespace Airplane
         private float _turboHeat;
         
         private Rigidbody _rb;
+        public Camera cameraPlayer;
 
         // Input Variables
         private float _inputH;
@@ -40,6 +42,14 @@ namespace Airplane
 
         private void Start()
         {
+            if (photonView.IsMine)
+            {
+                cameraPlayer.gameObject.SetActive(true);
+            }
+            else
+            {
+                cameraPlayer.gameObject.SetActive(false);
+            }
             _rb = GetComponent<Rigidbody>();
             _rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
 
@@ -51,12 +61,16 @@ namespace Airplane
 
         private void Update()
         {
-            Controls();
-            Movement();
-            SidewaysForceCalculation();
-            DampVelocities();
-            DampRotations();
-            AlignWithGround();
+            if (photonView.IsMine)
+            {
+                Controls();
+                Movement();
+                SidewaysForceCalculation();
+                DampVelocities();
+                DampRotations();
+                AlignWithGround();
+
+            }
             
 
         }
