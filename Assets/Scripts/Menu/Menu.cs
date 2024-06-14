@@ -8,8 +8,7 @@ public class Menu : MonoBehaviour
     public GameObject prelobbyPanel;
     public GameObject creditsPanel;
     public GameObject optionsPanel;
-    public GameObject lobbyHostPanel;
-    public GameObject lobbyWestPanel;
+    public GameObject lobbyPanel;
     public GameObject lenguagePanel;
     public GameObject soundPanel;
     public GameObject pplPanel;
@@ -39,8 +38,7 @@ public class Menu : MonoBehaviour
         optionsPanel.SetActive(false);
         lenguagePanel.SetActive(false);
         soundPanel.SetActive(false);
-        lobbyHostPanel.SetActive(false);
-        lobbyWestPanel.SetActive(false);
+        lobbyPanel.SetActive(false);
         pplPanel.SetActive(true);
 
         startButton.interactable = false;
@@ -90,11 +88,11 @@ public class Menu : MonoBehaviour
 
     public void OnClickPlayButton()
     {
-        if (!selectedPlane)
-        {
-            // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
-            return;
-        }
+        // if (!selectedPlane)
+        // {
+        //     // Mostrar un mensaje al jugador para seleccionar un avión antes de comenzar
+        //     return;
+        // }
         
         // Desactiva el panel actual
         pplPanel.SetActive(false);
@@ -124,24 +122,14 @@ public class Menu : MonoBehaviour
         Debug.Log("Options button clicked");
     }
 
-    public void OnClickCreateCodeButton()
+    public void OnClickCreateEnterCodeButton()
     {
         // Desactiva el panel actual
         prelobbyPanel.SetActive(false);
 
         // Activa el panel de Opciones (con la etiqueta "Window6")
-        lobbyHostPanel.SetActive(true);
+        lobbyPanel.SetActive(true);
         Debug.Log("Create Code button clicked");
-    }
-
-    public void OnClickEnterCodeButton()
-    {
-        // Desactiva el panel actual
-        prelobbyPanel.SetActive(false);
-
-        // Activa el panel de Opciones (con la etiqueta "Window6")
-        lobbyWestPanel.SetActive(true);
-        Debug.Log("Enter Code button clicked");
     }
 
     public void OnClickLenguageButton()
@@ -220,30 +208,17 @@ public class Menu : MonoBehaviour
         Debug.Log("Go Back Sound button clicked");
     }
 
-    public void GoBackLobbyHostButton()
+    public void GoBackLobbyButton()
     {
         // Activa el panel actual
-        lobbyHostPanel.SetActive(false);
+        lobbyPanel.SetActive(false);
         
         // Desactiva el panel de Opciones (con la etiqueta "Window6")
         prelobbyPanel.SetActive(true);
         
-        Debug.Log("Go Back Lobby Host button clicked");
+        Debug.Log("Go Back Lobby button clicked");
     }
-
-    public void GoBackLobbyWestButton()
-    {
-        // Activa el panel actual
-        lobbyWestPanel.SetActive(false);
-        
-        // Desactiva el panel de Opciones (con la etiqueta "Window6")
-        prelobbyPanel.SetActive(true);
-        
-        Debug.Log("Go Back Lobby West button clicked");
-    }
-
     
-
     public void QuitButton()
     {
         Application.Quit();
