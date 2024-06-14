@@ -1434,6 +1434,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lobby: {fileID: 65191334}
   menu: {fileID: 2853940865841594039}
+  roomName: 
 --- !u!1 &864307897
 GameObject:
   m_ObjectHideFlags: 0
@@ -4900,7 +4901,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &758146245234228534
 GameObject:
   m_ObjectHideFlags: 0
@@ -7417,7 +7418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1684711790}
-  inputField: {fileID: 65191334}
+  lobbyManager: {fileID: 820773677}
 --- !u!222 &4338015651447291483
 CanvasRenderer:
   m_ObjectHideFlags: 0
