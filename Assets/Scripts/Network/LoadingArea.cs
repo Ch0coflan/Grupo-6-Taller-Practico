@@ -1,18 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LoadingArea : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static LoadingArea Instance;
+    public GameObject chargePanel;
+
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowLoading()
     {
-        
+        chargePanel.SetActive(true);
     }
+
+    public void StopLoading()
+    {
+        chargePanel.SetActive(false);
+    }
+    
 }
