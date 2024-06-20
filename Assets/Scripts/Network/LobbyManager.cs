@@ -59,7 +59,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         if (PhotonNetwork.CurrentRoom.PlayerCount == PhotonNetwork.CurrentRoom.MaxPlayers)
         {
             // TODO: COLOCAR AQUI LA ESCENA
-            PhotonNetwork.LoadLevel("testeo intenso y sexoso");
+            PhotonNetwork.LoadLevel("SantiNew");
         }
     }
 }
